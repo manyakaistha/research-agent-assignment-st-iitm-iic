@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-15T20:27:14.080597+00:00",
+  "preserved_artifacts": {
+    "brief.md": true,
+    "run_audit.json": true,
+    "demo_brief.md": true,
+    "AI innovator assignment/nagpurcitytimes_2026-08-20.md": true,
+    "AI innovator assignment/ir_press_release_2026-08-08.md": true,
+    "AI innovator assignment/nse_announcement_2026-09-02.md": true,
+    "AI innovator assignment/ir_concall_2026-08-11.md": true,
+    "AI innovator assignment/candidate.zip": true,
+    "AI innovator assignment/README.md": true,
+    "AI innovator assignment/marketwatchindia_2024-03-18.md": true,
+    "AI innovator assignment/multibaggeralerts_2026-08-12.md": true,
+    "AI innovator assignment/businessdaily_2026-08-09.md": true,
+    "AI innovator assignment/nse_shareholding_2026-07-15.md": true
+  },
+  "mode": "model",
+  "as_of_current_local_date": true,
+  "model_validation": [],
+  "final_validation": [],
+  "revalidated": [],
+  "raw_hash_matches": true,
+  "normalized_hash_matches": true,
+  "raw_reparse_exact": true,
+  "promoted_brief_exact": true,
+  "code_hashes_match": {
+    "orchestrator.py": true,
+    "live_sources.py": true
+  },
+  "credential_leak_paths": [],
+  "headings": [
+    "Snapshot",
+    "Bull case",
+    "Bear case",
+    "Open questions",
+    "Sources"
+  ],
+  "live_status": "success",
+  "published": "2026-10-15",
+  "coverage_gaps": [
+    "6 image(s) omitted; image-only content unavailable (no OCR)."
+  ]
+}

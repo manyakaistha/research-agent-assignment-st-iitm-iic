@@ -19,6 +19,8 @@ import urllib.request
 import uuid
 from dataclasses import dataclass, asdict
 
+from live_sources import MAX_RAW_HTML, normalize_html, native_identity
+
 MAX_FILE = 100_000
 MAX_CORPUS = 500_000
 HEADINGS = ('Snapshot', 'Bull case', 'Bear case', 'Open questions')
@@ -125,9 +127,12 @@ def ingest(directory, as_of):
 def resolve_identity(sources, ticker):
     anchors = []
     # Identity requires explicit company name immediately associated with NSE ticker.
-    pattern = re.compile(r'([A-Z][\w& .-]{2,90}?\b(?:Ltd\.?|Limited))\s*\(NSE:\s*' + re.escape(ticker) + r'\)', re.I)
+    pattern = re.compile(r'([A-Z][\w& .-]{2,90}?\b(?:Ltd\.?|Limited))\s*\((?:[^()\n]*[,;]\s*)?NSE:\s*' + re.escape(ticker) + r'(?=\s*[,;)])[^()\n]*\)', re.I)
     for source in sources:
-        if 'official' in source.type.lower() and 'blog' not in source.type.lower():
+        if 'official' in source.type.lower() and 'blog' not in source.type.lower() and not source.injection:
+            native = native_identity(source.body, source.url, ticker)
+            if native:
+                anchors.append((native[0], source))
             for match in pattern.finditer(source.body):
                 name = match.group(1).strip().split('\n')[-1]
                 anchors.append((name, source))
@@ -210,12 +215,35 @@ def grounding_errors(claim, support):
     errors = []
     if numeric_tokens(claim) - numeric_tokens(support):
         errors.append('unsupported numeric claim in selected evidence')
-    topics = (r'revenue', r'profit after tax|net profit|\bPAT\b', r'EBITDA',
+    topics = (r'revenue', r'profit after tax|net profit|\bPAT\b', r'net income', r'operating cash flows?', r'EBITDA',
               r'margin', r'receivable', r'pledge', r'copper', r'capex',
               r'order book', r'export', r'capacity', r'GST|tax credit', r'debt')
     for topic in topics:
         if re.search(topic, claim, re.I) and not re.search(topic, support, re.I):
             errors.append('claim metric/topic absent from selected evidence')
+    for scope in ('consolidated', 'standalone'):
+        if re.search(r'\b' + scope + r'\b', claim, re.I) and not re.search(r'\b' + scope + r'\b', support, re.I):
+            errors.append('unstated financial reporting scope')
+    if re.search(r'company.wide|group.wide|overall operating margin', claim, re.I) and re.search(r'IT services operating margin', support, re.I) and not re.search(r'company.wide|group.wide|overall operating margin', support, re.I):
+        errors.append('segment margin presented as company-wide margin')
+    if re.search(r'revenue.*\d+(?:\.\d+)?\s*%|\d+(?:\.\d+)?\s*%.*revenue', claim, re.I) and re.search(r'constant currency', support, re.I) and not re.search(r'constant currency|\bCC\b', claim, re.I):
+        # Bind growth values to their basis clauses even when one evidence unit
+        # contains both bases (for example nested reported/CC revenue bullets).
+        basis = list(re.finditer(r'(?:(?:in|on)\s+)?(?:reported|constant currency)(?:\s+terms)?', support, re.I))
+        reported_pairs, reported_values = set(), set()
+        for index, marker in enumerate(basis):
+            if 'reported' not in marker.group().lower():
+                continue
+            suffix = bool(re.match(r'(?:in|on)\s+', marker.group(), re.I) or re.search(r'terms$', marker.group(), re.I))
+            left = basis[index - 1].end() if index else 0
+            right = basis[index + 1].start() if index + 1 < len(basis) else len(support)
+            clause = support[left:marker.start()] if suffix else support[marker.end():right]
+            reported_pairs.update((m.group(1), m.group(2).lower()) for m in re.finditer(r'([+−-]?\d+(?:\.\d+)?)\s*%\s*(QoQ|YoY)\b', clause, re.I))
+            reported_values.update(re.findall(r'([+−-]?\d+(?:\.\d+)?)\s*%', clause))
+        claim_pairs = {(m.group(1), m.group(2).lower()) for m in re.finditer(r'([+−-]?\d+(?:\.\d+)?)\s*%\s*(QoQ|YoY)\b', claim, re.I)}
+        claim_values = set(re.findall(r'([+−-]?\d+(?:\.\d+)?)\s*%', claim))
+        if (claim_pairs and not claim_pairs <= reported_pairs) or not claim_values <= reported_values:
+            errors.append('constant-currency revenue growth presented as reported growth')
     if re.search(r'\bminus\b|[−-]\s*₹?\s*\d', claim, re.I) and not re.search(r'\bminus\b|[−-]\s*₹?\s*\d', support, re.I):
         errors.append('unsupported negative sign')
     if re.search(r'\b(?:no|not|never|without)\b', claim, re.I) and not re.search(r'\b(?:no|not|never|without)\b', support, re.I):
@@ -454,6 +482,10 @@ def validate(sections, sources, conflicts, text, model=False, temporal=None):
             if numeric_tokens(claim) - numeric_tokens(support):
                 errors.append('unsupported numeric claim')
             if model:
+                # Only this exact non-factual sentinel may omit selected quotes.
+                if (claim == 'The supplied evidence does not establish a supported conclusion for this section.'
+                        and cites == [] and entry.get('evidence') == []):
+                    continue
                 evidence = entry.get('evidence')
                 if not isinstance(evidence, list) or not evidence:
                     errors.append('missing exact evidence quotes')
@@ -515,9 +547,16 @@ def load_env(path):
 def route(args):
     provider = args.provider
     if provider == 'auto':
-        provider = ('openai' if os.getenv('OPENAI_API_KEY') or os.getenv('OPENAI_BASE_URL') or args.base_url
-                    else 'gemini' if os.getenv('GEMINI_API_KEY') or os.getenv('GOOGLE_API_KEY')
-                    else 'groq' if os.getenv('GROQ_API_KEY') else 'offline')
+        # Workflow defaults take precedence over unrelated provider configuration.
+        # Missing credentials use the deterministic fallback, never another API.
+        if args.live_data:
+            provider = 'gemini' if os.getenv('GEMINI_API_KEY') or os.getenv('GOOGLE_API_KEY') else 'offline'
+        elif args.ticker.upper() == 'SRVCABLE':
+            provider = 'groq' if os.getenv('GROQ_API_KEY') else 'offline'
+        else:
+            provider = ('openai' if os.getenv('OPENAI_API_KEY') or os.getenv('OPENAI_BASE_URL') or args.base_url
+                        else 'gemini' if os.getenv('GEMINI_API_KEY') or os.getenv('GOOGLE_API_KEY')
+                        else 'groq' if os.getenv('GROQ_API_KEY') else 'offline')
     if provider == 'offline':
         return {'provider': provider, 'model': None, 'base_url': None, 'key': ''}
     if provider == 'groq':
@@ -563,44 +602,94 @@ def api_call(config, payload):
         raise ValueError('API connection failed') from None
 
 
-def retrieve_live(urls, as_of):
-    """Fetch only explicitly supplied public HTTPS Markdown URLs, never discover URLs.
+def retrieve_live(urls, as_of, snapshot_dir=None):
+    """Fetch explicit public HTTPS Markdown or allowlisted Wipro HTML releases.
 
-    This is a small opt-in tool, not a search engine, PDF parser or NSE scraper.
-    Source metadata URLs remain inert; only the CLI's --live-url values are fetched.
+    Provenance URLs are inert. No discovery, redirects, PDFs or private networks.
+    Optional snapshots retain successful and failed attempts for durable audit.
     """
-    if not 1 <= len(urls) <= 5:
-        raise ValueError('Live mode requires between one and five explicit --live-url values')
     fetched = []
+    snapshots = Path(snapshot_dir) if snapshot_dir is not None else None
+    if snapshots:
+        snapshots.mkdir(parents=True, exist_ok=True)
+
+    def persist():
+        if snapshots:
+            (snapshots / 'fetches.json').write_text(json.dumps(fetched, ensure_ascii=False, indent=2), encoding='utf-8')
+
+    if not 1 <= len(urls) <= 5:
+        persist()
+        raise ValueError('Live mode requires between one and five explicit --live-url values')
     class NoRedirect(urllib.request.HTTPRedirectHandler):
         def redirect_request(self, *unused):
             return None
     with tempfile.TemporaryDirectory(prefix='nse-live-') as temp:
         for i, url in enumerate(urls, 1):
-            if not valid_url(url) or urllib.parse.urlsplit(url).scheme != 'https':
-                raise ValueError('Live document URLs must be public HTTPS URLs')
-            parsed = urllib.parse.urlsplit(url)
-            addresses = socket.getaddrinfo(parsed.hostname, parsed.port or 443, type=socket.SOCK_STREAM)
-            if not addresses or any(not ipaddress.ip_address(a[4][0]).is_global for a in addresses):
-                raise ValueError('Live URLs cannot address private or local networks')
-            request = urllib.request.Request(url, headers={'User-Agent': 'document-research-agent/1.0', 'Accept': 'text/markdown, text/plain'})
+            filename = f'live_{i:03d}.md'
+            record = {'filename': filename, 'retrieved_url': url,
+                      'retrieved_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'status': 'pending'}
+            fetched.append(record)
+            raw = None
             try:
+                if not valid_url(url) or urllib.parse.urlsplit(url).scheme != 'https':
+                    raise ValueError('Live document URLs must be public HTTPS URLs')
+                parsed = urllib.parse.urlsplit(url)
+                addresses = socket.getaddrinfo(parsed.hostname, parsed.port or 443, type=socket.SOCK_STREAM)
+                if not addresses or any(not ipaddress.ip_address(a[4][0]).is_global for a in addresses):
+                    raise ValueError('Live URLs cannot address private or local networks')
+                request = urllib.request.Request(url, headers={'User-Agent': 'document-research-agent/1.0', 'Accept': 'text/markdown, text/plain, text/html'})
                 with urllib.request.build_opener(NoRedirect).open(request, timeout=30) as response:
                     content_type = response.headers.get_content_type()
-                    if content_type not in ('text/markdown', 'text/plain', 'text/x-markdown'):
-                        raise ValueError('Live source must return Markdown/plain text with source front matter')
-                    raw = response.read(MAX_FILE + 1)
-                if len(raw) > MAX_FILE:
-                    raise ValueError('Live source exceeds file size limit')
-                text = raw.decode('utf-8')
-            except (urllib.error.URLError, OSError, UnicodeError) as exc:
-                raise ValueError('Live retrieval failed: ' + type(exc).__name__) from None
-            filename = f'live_{i:03d}.md'
-            Path(temp, filename).write_text(text, encoding='utf-8')
-            fetched.append({'filename': filename, 'retrieved_url': url, 'retrieved_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'sha256': sha(text)})
+                    record['content_type'] = content_type
+                    raw = response.read(MAX_RAW_HTML + 1)
+                    record['raw_sha256'] = hashlib.sha256(raw).hexdigest()
+                    record['raw_bytes'] = len(raw)
+                    if snapshots:
+                        raw_path = snapshots / f'live_{i:03d}.raw'
+                        raw_path.write_bytes(raw)
+                        record['raw_snapshot'] = str(raw_path)
+                    if len(raw) > MAX_RAW_HTML:
+                        record['raw_truncated'] = True
+                        raise ValueError('Live raw response exceeds 2MB size limit; saved prefix only')
+                    charset = response.headers.get_content_charset() or 'utf-8'
+                text = raw.decode(charset, errors='strict')
+                if content_type == 'text/html':
+                    text, details = normalize_html(text, url)
+                    record.update(details)
+                elif content_type not in ('text/markdown', 'text/plain', 'text/x-markdown'):
+                    raise ValueError('Live source must return Markdown/plain text or allowlisted official HTML')
+                if len(text.encode('utf-8')) > MAX_FILE:
+                    raise ValueError('Live normalized source exceeds file size limit')
+                Path(temp, filename).write_text(text, encoding='utf-8')
+                record['sha256'] = sha(text)
+                record['normalized_sha256'] = sha(text)
+                if snapshots:
+                    normalized_path = snapshots / filename
+                    normalized_path.write_text(text, encoding='utf-8')
+                    record['normalized_snapshot'] = str(normalized_path)
+                single, invalid = ingest(temp, as_of)
+                if invalid or len(single) != i:
+                    raise ValueError('Invalid live document metadata: ' + '; '.join(r['reason'] for r in invalid))
+                record['status'] = 'success'
+                persist()
+            except (ValueError, LookupError, urllib.error.URLError, OSError) as exc:
+                record['status'] = 'failed'
+                if isinstance(exc, urllib.error.HTTPError):
+                    record['http_status'] = exc.code
+                    if raw is None:
+                        raw = exc.read(MAX_RAW_HTML + 1)
+                        record['raw_sha256'] = hashlib.sha256(raw).hexdigest()
+                        record['raw_bytes'] = len(raw)
+                        record['raw_truncated'] = len(raw) > MAX_RAW_HTML
+                        if snapshots:
+                            raw_path = snapshots / f'live_{i:03d}.raw'
+                            raw_path.write_bytes(raw)
+                            record['raw_snapshot'] = str(raw_path)
+                    exc.close()
+                record['failure'] = ('Live retrieval failed: ' + type(exc).__name__ + ': ' + str(exc) if isinstance(exc, (UnicodeError, LookupError)) else str(exc) if isinstance(exc, ValueError) else 'Live retrieval failed: ' + type(exc).__name__)
+                persist()
+                raise ValueError(record['failure']) from None
         sources, rejected = ingest(temp, as_of)
-    if rejected or len(sources) != len(urls):
-        raise ValueError('Invalid live document metadata: ' + '; '.join(r['reason'] for r in rejected))
     return sources, fetched
 
 
@@ -618,30 +707,43 @@ def run(args):
     for target in (args.audit, args.output):
         if target and Path(target).resolve().is_relative_to(root):
             raise ValueError('Output and audit paths must be outside the source documents directory')
-    sources, rejected = ingest(args.docs, as_of)
-    fetched = []
-    if args.live_data:
-        live_sources, fetched = retrieve_live(args.live_url, as_of)
-        seen = {s.sha256 for s in sources}
-        for source in live_sources:
-            if source.sha256 in seen:
-                rejected.append({'filename': source.filename, 'reason': 'duplicate live document content'})
-                continue
-            source.id = f'S{len(sources) + 1}'
-            seen.add(source.sha256)
-            sources.append(source)
-        if sum(len(s.body.encode('utf-8')) for s in sources) > MAX_CORPUS:
-            raise ValueError('Combined local/live corpus exceeds size limit')
-    identity = resolve_identity(sources, ticker)
-    conflicts, temporal = detect_issues(sources)
-    system = Path(__file__).with_name('system_prompt.md').read_text(encoding='utf-8') + '\nReview policy: ' + REVIEWS[args.review]
-    config = route(args)
     run_dir = Path(args.audit).resolve().parent / 'runs' / (dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S') + '-' + uuid.uuid4().hex[:10])
     if run_dir.resolve().is_relative_to(root):
         run_dir = Path(args.audit).resolve().parent / ('research-artifacts-' + uuid.uuid4().hex)
     if run_dir.resolve().is_relative_to(root):
         raise ValueError('Generated artifacts must be outside source documents directory')
     run_dir.mkdir(parents=True, exist_ok=False)
+    try:
+        sources, rejected = ingest(args.docs, as_of)
+        fetched = []
+        if args.live_data:
+            live_sources, fetched = retrieve_live(args.live_url, as_of, run_dir / 'live_sources')
+            seen = {s.sha256 for s in sources}
+            for source in live_sources:
+                if source.sha256 in seen:
+                    rejected.append({'filename': source.filename, 'reason': 'duplicate live document content'})
+                    continue
+                source.id = f'S{len(sources) + 1}'
+                seen.add(source.sha256)
+                sources.append(source)
+            if sum(len(s.body.encode('utf-8')) for s in sources) > MAX_CORPUS:
+                raise ValueError('Combined local/live corpus exceeds size limit')
+        identity = resolve_identity(sources, ticker)
+        conflicts, temporal = detect_issues(sources)
+    except (ValueError, OSError) as exc:
+        manifest = run_dir / 'live_sources' / 'fetches.json'
+        failure = {'as_of': str(as_of), 'ticker': ticker, 'run_dir': str(run_dir),
+                   'failure': str(exc), 'mode': 'failed', 'live_data': bool(args.live_data),
+                   'tool_code_sha256': {name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest() for name in ('orchestrator.py', 'live_sources.py')},
+                   'live_fetches': json.loads(manifest.read_text(encoding='utf-8')) if manifest.exists() else []}
+        serialized = json.dumps(failure, ensure_ascii=False, indent=2)
+        (run_dir / 'audit.json').write_text(serialized, encoding='utf-8')
+        Path(args.audit).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.audit).write_text(serialized, encoding='utf-8')
+        raise
+    prompt_file = 'live_system_prompt.md' if args.live_data else 'system_prompt.md'
+    system = Path(__file__).with_name(prompt_file).read_text(encoding='utf-8') + '\nReview policy: ' + REVIEWS[args.review]
+    config = route(args)
     (run_dir / 'writer_system_prompt.md').write_text(system, encoding='utf-8')
     audit = {'identity': identity, 'as_of': str(as_of), 'review': args.review,
              'source_id_scope': 'Filename-sorted valid metadata documents in this corpus; stable for identical corpus, not insertion-stable.',
@@ -649,6 +751,7 @@ def run(args):
              'conflicts': conflicts, 'temporal_differences': temporal,
              'provider': config['provider'], 'model': config['model'], 'prompt_sha256': sha(system),
              'source_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+             'tool_code_sha256': {name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest() for name in ('orchestrator.py', 'live_sources.py')},
              'run_dir': str(run_dir), 'fallback_reason': None,
              'live_data': 'explicit opt-in; user-supplied URLs only' if fetched else 'disabled; no URLs fetched',
              'live_fetches': fetched}
@@ -656,6 +759,7 @@ def run(args):
     if config['provider'] != 'offline':
         user = {'ticker': ticker, 'company': identity, 'as_of': str(as_of), 'conflicts': conflicts,
                 'temporal_differences': temporal,
+                'live_coverage_gaps': [{'filename': f['filename'], 'gaps': f.get('coverage_gaps', [])} for f in fetched],
                 'documents': [{k: getattr(s, k) for k in ('id', 'source', 'url', 'published', 'type', 'trust')}
                               for s in sources if s.status == 'included'],
                 'evidence_catalog': evidence_catalog(sources)}

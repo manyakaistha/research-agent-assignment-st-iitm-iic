@@ -96,7 +96,7 @@ class OrchestratorTests(unittest.TestCase):
             self.assertEqual(config['base_url'], 'http://localhost:8000/v1')
             self.assertEqual(o.route(self.args())['provider'], 'offline')
         with patch.dict(os.environ, {'OPENAI_BASE_URL': 'https://gateway.example/v1', 'OPENAI_MODEL':'custom'}, clear=True):
-            self.assertEqual(o.route(self.args('--provider', 'auto'))['model'], 'custom')
+            self.assertEqual(o.route(self.args('--provider', 'auto'))['provider'], 'offline')
 
     def test_metadata_invalid_duplicate_future_url_and_symlink(self):
         original = (self.docs/'ir_press_release_2026-08-08.md').read_text()

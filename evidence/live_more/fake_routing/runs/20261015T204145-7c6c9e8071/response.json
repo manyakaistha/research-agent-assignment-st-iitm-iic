@@ -1,0 +1,16 @@
+{
+  "visible_content": "{\n  \"Snapshot\": [\n    {\n      \"text\": \"Sarvottam Cables Ltd manufactures power cables, wires and conductors.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E1\"}]\n    },\n    {\n      \"text\": \"For the quarter ended 30 June 2026, revenue from operations was ₹1,248 crore, up 18.0% year‑on‑year.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E1\"},{\"id\":\"S3:E3\"}]\n    },\n    {\n      \"text\": \"Profit after tax for the quarter was ₹82 crore, a 5.9% increase from the prior year.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E6\"}]\n    },\n    {\n      \"text\": \"EBITDA margin fell to 11.2% from 12.9% a year earlier, a decline of 170 basis points.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E5\"}]\n    }\n  ],\n  \"Bull case\": [\n    {\n      \"text\": \"The order book rose to ₹3,900 crore as of 30 June 2026, up from ₹3,150 crore a year earlier.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E7\"}]\n    },\n    {\n      \"text\": \"The company says the new Bharuch plant, adding about 30% to cable capacity, will start commercial production in Q3 FY27.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E9\"}]\n    }\n  ],\n  \"Bear case\": [\n    {\n      \"text\": \"Margins contracted by 170 basis points to 11.2% as copper prices rose sharply, which management expects to pass on to customers.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E5\"},{\"id\":\"S3:E10\"}]\n    },\n    {\n      \"text\": \"The company reports receivable days increased from 78 to 96 over the last year, driven by slower payments from two large state utilities.\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\":\"S2:E5\"}]\n    },\n    {\n      \"text\": \"A statutory demand of ₹46.3 crore has been issued, and the company intends to file an appeal, stating it has a strong case on merits.\",\n      \"citations\": [\"S7\"],\n      \"evidence\": [{\"id\":\"S7:E1\"},{\"id\":\"S7:E2\"}]\n    }\n  ],\n  \"Open questions\": [\n    {\n      \"text\": \"Revenue conflict: the news report cites ₹1,428 crore (35% growth) while the official filing shows ₹1,248 crore (18% growth); which figure should be used?\",\n      \"citations\": [\"S1\",\"S3\"],\n      \"evidence\": [{\"id\":\"S1:E2\"},{\"id\":\"S3:E3\"}]\n    },\n    {\n      \"text\": \"Promoter pledge: a 2024 news article said pledged promoter holding was 35%, but the latest filing shows only 4.1% pledged as of June 2026; what is the current pledge level?\",\n      \"citations\": [\"S4\",\"S8\"],\n      \"evidence\": [{\"id\":\"S4:E1\"},{\"id\":\"S8:E2\"}]\n    },\n    {\n      \"text\": \"How will the company address the rise in receivable days and ensure timely cash collection from state utility customers?\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\":\"S2:E5\"}]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "queue_time": 0.404226244,
+    "prompt_tokens": 3795,
+    "prompt_time": 0.165577179,
+    "completion_tokens": 2371,
+    "completion_time": 4.966256255,
+    "total_tokens": 6166,
+    "total_time": 5.131833434,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1555
+    }
+  }
+}

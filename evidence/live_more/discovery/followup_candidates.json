@@ -1,0 +1,27 @@
+{
+  "candidate": {
+    "company": "Coforge Limited",
+    "nse_ticker": "COFORGE",
+    "url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+    "publication_date": "July 27, 2026",
+    "identity_date_quote": "Princeton, NJ and Greater Noida, India, July 27, 2026 – Coforge Limited (NSE: COFORGE), a global AI-native engineering services leader, today announced its financial results for the quarter ended June 30, 2026.",
+    "narrative_quote": "Our Q1 performance, with 21.1% sequential growth and 33.3% YoY growth in US dollar terms, reflects the strength of our differentiated capabilities and an execution intensity that is uniquely our own.",
+    "metrics": [
+      "Revenue INR 55,277 Mn / USD 592.2 Mn; +49% YoY INR, +33% USD",
+      "EBITDA INR 11,233 Mn / USD 120.3 Mn; +74% YoY INR, 20.3% margin, +285 bps YoY",
+      "EBIT INR 8,822 Mn / USD 94.5 Mn; +101% YoY INR, 16.0% margin, +414 bps YoY",
+      "PAT INR 5,186 Mn / USD 55.6 Mn; +110% YoY INR, +46% USD",
+      "Next 12 months signed order book $2.23B, +27% QoQ and +44% YoY",
+      "Q1 order intake $691M TCV"
+    ],
+    "container": "div.mt-064.post-body > span#hs_cos_wrapper_post_body.hs_cos_wrapper_type_rich_text; this contains announcement paragraph, Key Financial Highlights, metrics list and CEO blockquote.",
+    "source_locations": "Raw HTML byte/character offset 84020 begins div.mt-064.post-body; identity/date sentence at offset 84490; financial highlights start at 84665; narrative quote begins at 85442. page JSON-LD NewsArticle appears around offset 8,284.",
+    "evidence_file": "coforge_q1fy27.html",
+    "bytes": 120456,
+    "sha256": "45b2101c249dd0be5743d46d2e7192e91e1fed1f47d35a55c4897c28bb6606a5",
+    "fetch_method": "Normal urllib direct GET with User-Agent: document-research-agent/1.0 and Accept: text/markdown,text/plain,text/html; redirect following disabled.",
+    "fetch_status": 200,
+    "fetch_time_utc": "2026-10-15T20:36:15Z"
+  },
+  "previous_persistent_q2_attempt": "persistent_q2fy27.html remains a bot-challenge response; excluded."
+}

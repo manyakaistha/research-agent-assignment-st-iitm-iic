@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "live_001.md",
+    "retrieved_url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+    "retrieved_at": "2026-10-15T20:40:16.528717+00:00",
+    "status": "success",
+    "content_type": "text/html",
+    "raw_sha256": "c839dc7a407f8f351e717f0ee424c5c2525369b117bd7f6530e63e6eaf9ef3e3",
+    "raw_bytes": 120456,
+    "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/live_sources/live_001.raw",
+    "published": "2026-07-27",
+    "date_evidence": "Princeton, NJ and Greater Noida, India, July 27, 2026– Coforge Limited (NSE: COFORGE), a global AI-native engineering services leader, today announced its financial results for the quarter ended June 30, 2026.",
+    "company_identity": "Coforge Limited (NSE: COFORGE)",
+    "coverage_gaps": [],
+    "sha256": "81f07206e4203eba97b7ac853e70e3e2562ec95d7420148f5c2428bee56a5ab4",
+    "normalized_sha256": "81f07206e4203eba97b7ac853e70e3e2562ec95d7420148f5c2428bee56a5ab4",
+    "normalized_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/live_sources/live_001.md"
+  }
+]

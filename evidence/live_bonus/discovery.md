@@ -1,0 +1,9 @@
+# Live bonus discovery (2026-10-16 Asia/Kolkata)
+
+Director read agents.md, README_AGENT.md, orchestrator.py, all three existing test files and the assignment README before implementation. Baseline: 25 unittest tests passed. Existing optional fetcher accepted only front-mattered Markdown; actual HTML was unsupported and temporary snapshots were deleted.
+
+Selected NSE ticker: WIPRO. The official Wipro September 30, 2026 quarterly release returned HTTP 200 through Python urllib, as did the prior June release. Latest release dateline: October 15, 2026. TCS latest result returned 403; no bypass attempted. Probe URL/time/status and raw bytes are retained in ../live_bonus_discovery/. Earlier pre-existing discovery failures (TCS/Infosys 403, HCLTech timeout) remain in ../live_discovery/. No fictional-company research URL was fetched.
+
+Delegation: I1, gpt-6.1-sol/medium, clean context, owns orchestrator.py plus optional live_sources.py and new focused tests/fixtures. Question: can the explicit fetcher support official Wipro HTML without weakening existing evidence gates? Reviewer R1 is independent and will inspect implementation and real generated output after implementation. Director owns source selection, live execution, docs/log, integration and final checks. No nested workers.
+
+Evidence cautions for review: headline growth in constant currency differs from reported USD growth. Gross revenue and net income use INR billions; segment revenue and bookings use USD millions. Operating margin is IT Services segment, not group-wide. Publication date differs from reporting quarter end. Narrative identifies IFRS but does not explicitly label standalone/consolidated scope. Footnote superscripts must not become financial digits. One comprehensive release is useful for a quarterly brief but cannot establish valuation or independently verify management assertions.

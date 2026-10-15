@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-15T20:42:45.151396+00:00",
+  "preserved_artifacts": {
+    "brief.md": true,
+    "run_audit.json": true,
+    "demo_brief.md": true,
+    "AI innovator assignment/nagpurcitytimes_2026-08-20.md": true,
+    "AI innovator assignment/ir_press_release_2026-08-08.md": true,
+    "AI innovator assignment/nse_announcement_2026-09-02.md": true,
+    "AI innovator assignment/ir_concall_2026-08-11.md": true,
+    "AI innovator assignment/candidate.zip": true,
+    "AI innovator assignment/README.md": true,
+    "AI innovator assignment/marketwatchindia_2024-03-18.md": true,
+    "AI innovator assignment/multibaggeralerts_2026-08-12.md": true,
+    "AI innovator assignment/businessdaily_2026-08-09.md": true,
+    "AI innovator assignment/nse_shareholding_2026-07-15.md": true,
+    "evidence/live_bonus/wipro_brief.md": true,
+    "evidence/live_bonus/wipro_audit.json": true,
+    "evidence/live_bonus/independent_review.md": true
+  },
+  "runs": {
+    "techm": {
+      "run_dir": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/techm/runs/20261015T204016-81d3fc4da2",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "mode": "model",
+      "as_of": "2026-10-16",
+      "publication": "2026-10-15",
+      "raw_sha256": "d1d652063e0f4d5805bd74eeddf8e21f868dae5baaa6b35168694c686c94d16a",
+      "source_url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q2-fy27-results/",
+      "retrieved_at": "2026-10-15T20:40:16.528735+00:00",
+      "raw_hash_matches": true,
+      "normalized_hash_matches": true,
+      "raw_reparse_exact": true,
+      "code_hashes_match": {
+        "orchestrator.py": true,
+        "live_sources.py": true
+      },
+      "prompt_hash_matches": true,
+      "promoted_brief_exact": true,
+      "final_validation": [],
+      "model_validation": [],
+      "revalidated": [],
+      "headings": [
+        "Snapshot",
+        "Bull case",
+        "Bear case",
+        "Open questions",
+        "Sources"
+      ],
+      "coverage_gaps": [
+        "HTML table omitted: merged or ambiguous header/row structure; table metrics unavailable."
+      ]
+    },
+    "coforge": {
+      "run_dir": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "mode": "model",
+      "as_of": "2026-10-16",
+      "publication": "2026-07-27",
+      "raw_sha256": "c839dc7a407f8f351e717f0ee424c5c2525369b117bd7f6530e63e6eaf9ef3e3",
+      "source_url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+      "retrieved_at": "2026-10-15T20:40:16.528717+00:00",
+      "raw_hash_matches": true,
+      "normalized_hash_matches": true,
+      "raw_reparse_exact": true,
+      "code_hashes_match": {
+        "orchestrator.py": true,
+        "live_sources.py": true
+      },
+      "prompt_hash_matches": true,
+      "promoted_brief_exact": true,
+      "final_validation": [],
+      "model_validation": [],
+      "revalidated": [],
+      "headings": [
+        "Snapshot",
+        "Bull case",
+        "Bear case",
+        "Open questions",
+        "Sources"
+      ],
+      "coverage_gaps": []
+    }
+  },
+  "credential_leak_paths": [],
+  "fake_routing": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: missing dated historical/current pledge comparison with denominator",
+    "as_of": "2026-09-23",
+    "live_fetches": []
+  },
+  "prior_wipro_snapshot_reparse_exact": true
+}

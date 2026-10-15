@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-10-16",
+  "ticker": "PERSISTENT",
+  "run_dir": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/persistent/runs/20261015T203507-8f098174f9",
+  "failure": "Live retrieval failed: HTTPError",
+  "mode": "failed",
+  "live_data": true,
+  "tool_code_sha256": {
+    "orchestrator.py": "a1fd563738008833a60098f48d8bba10b714659ee3af92e18b15c5161c7fc9a4",
+    "live_sources.py": "48bf38f01202927fd30a4e7c956720b2462f563a868a107d8eac45477dd6a513"
+  },
+  "live_fetches": [
+    {
+      "filename": "live_001.md",
+      "retrieved_url": "https://www.persistent.com/media/press-releases/q1-fy27-results/",
+      "retrieved_at": "2026-10-15T20:35:07.026644+00:00",
+      "status": "failed",
+      "http_status": 302,
+      "raw_sha256": "0ead7f5d31058be374b50c74872e6eadb44103f022bc81722822eecaa9736f93",
+      "raw_bytes": 1386,
+      "raw_truncated": false,
+      "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/persistent/runs/20261015T203507-8f098174f9/live_sources/live_001.raw",
+      "failure": "Live retrieval failed: HTTPError"
+    }
+  ]
+}

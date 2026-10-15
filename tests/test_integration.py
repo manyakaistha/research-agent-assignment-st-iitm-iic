@@ -32,7 +32,7 @@ class LiveAndGatewayTests(unittest.TestCase):
                     self.assertNotIn('test-key-not-real', path.read_text())
         with patch.dict(os.environ, {'GROQ_API_KEY': 'groq-test', 'OPENAI_BASE_URL': 'http://localhost:8080/v1'}, clear=True):
             args.provider = 'auto'
-            self.assertEqual(o.route(args)['provider'], 'openai')
+            self.assertEqual(o.route(args)['provider'], 'groq')
 
     def test_live_requires_optin_and_fictional_never_fetches(self):
         with patch('orchestrator.retrieve_live') as fetch:

@@ -1,0 +1,55 @@
+{
+  "fetch_metadata_file": "fetch_metadata.json",
+  "fetch_method": "Python urllib.request.urlopen; normal direct GET; no browser impersonation beyond User-Agent; no anti-bot bypass",
+  "candidates": [
+    {
+      "company": "Tech Mahindra",
+      "nse_ticker": "TECHM",
+      "url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q1-fy27-results/",
+      "publication_date": "July 16, 2026",
+      "identity_date_quote": "Mumbai | July 16, 2026 : Tech Mahindra (NSE: TECHM, BSE: 532755), a leading global provider of technology consulting and digital solutions to enterprises across industries announced the audited consolidated financial results for the quarter ended June 30, 2026.",
+      "narrative_quote": "YoY growth of 6.1% coupled with three consecutive quarters of deal wins exceeding $ 1 billion dollars underscores the resilience of our business and the growing momentum across our portfolio.",
+      "metrics": [
+        "Revenue ₹15,712 crores; up 4.2% QoQ, up 17.7% YoY",
+        "EBIT ₹2,264 crores; up 8.6% QoQ, up 53.3% YoY",
+        "PAT ₹1,465 crores, up 28.4% YoY",
+        "new deal wins TCV USD 1,078 mn, up 33.3% YoY"
+      ],
+      "container": "article.node.node--type-press-release.node--view-mode-full; narrative/metrics in .news-content > .field--name-body",
+      "source_location": "raw HTML offset 127110: datetime field field--name-field-news-date and following div.news-content > div.field--name-body; exact opening meta abstract around offset 1413 repeats identity sentence. Article tag begins before page body; date can locate by July 16, 2026.",
+      "evidence_file": "techmahindra_q1fy27.html",
+      "sha256": "39660e3ffeebe89c15f15fca412b5beb7970976be8dce678ec7547886d0d7b33",
+      "bytes": 167480,
+      "legal_name_on_page": "Tech Mahindra Limited",
+      "legal_name_evidence_location": "techmahindra_q1fy27.html offset ~? near closing release forward-looking-statements section; exact phrase appears in body: “Tech Mahindra Limited (“the Company” or “TechM”)”. Footer also says © 2022 Tech Mahindra Limited."
+    },
+    {
+      "company": "Persistent Systems",
+      "nse_ticker": "PERSISTENT",
+      "url": "https://www.persistent.com/media/press-releases/q1-fy27-results/",
+      "publication_date": "August 2, 2026",
+      "identity_date_quote": "Persistent Systems (BSE: 533179 and NSE: PERSISTENT) today announced the Company’s audited financial results for the quarter and year ended June 30, 2026, as approved by the Board of Directors.",
+      "narrative_quote": "We marked our 25th sequential quarter of revenue growth to begin FY27, delivering 3.8% quarter-over-quarter and 16.1% year-over-year revenue growth, along with an EBIT margin of 16.0%.",
+      "metrics": [
+        "Revenue USD 452.4 million; 3.8% QoQ and 16.1% YoY",
+        "Revenue INR 43,032.3 million; 6.1% QoQ and 29.1% YoY",
+        "EBIT INR 6,868.8 million; 16.0% margin; 32.7% YoY",
+        "PAT INR 4,830.4 million; 11.2% margin; 13.7% YoY; QoQ decline due to forex losses"
+      ],
+      "container": "main.theme-main > section.post.post-single.post-single--light (article content); h1.h4, p.date.text-mid.p-sm; results table/narrative within post section",
+      "source_location": "raw HTML offset 157148: h1.h4 and p.date.text-mid.p-sm; identity sentence follows in post body near this location. About Persistent footer/body also uses Persistent Systems with NSE ticker.",
+      "evidence_file": "persistent_q1fy27.html",
+      "sha256": "0cb628bb37b587670e890b5d2b90a91bbab1f974253598d1fc5010bca44d1cb5",
+      "bytes": 329941,
+      "legal_name_on_page": "Persistent Systems Limited",
+      "legal_name_evidence_location": "persistent_q1fy27.html raw offset 1645; page includes visible footer/branding text “Persistent Systems Limited” and alt text at offset 2874; result body uses Persistent Systems (BSE: 533179 and NSE: PERSISTENT)."
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.persistent.com/media/press-releases/q2-fy27-results/",
+      "file": "persistent_q2fy27.html",
+      "outcome": "urllib returned HTTP status 200 but redirected to validate.perfdrive.com Radware/Perfdive bot-challenge page, not the official results page; excluded as inaccessible. No challenge bypass attempted."
+    }
+  ]
+}

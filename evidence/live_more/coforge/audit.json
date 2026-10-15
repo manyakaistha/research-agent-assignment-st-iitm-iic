@@ -1,0 +1,75 @@
+{
+  "identity": {
+    "company": "Coforge Limited",
+    "alias": "Coforge",
+    "ticker": "COFORGE"
+  },
+  "as_of": "2026-10-16",
+  "review": "skeptical",
+  "source_id_scope": "Filename-sorted valid metadata documents in this corpus; stable for identical corpus, not insertion-stable.",
+  "sources": [
+    {
+      "id": "S1",
+      "filename": "live_001.md",
+      "source": "Coforge Limited official press release",
+      "url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+      "published": "2026-07-27",
+      "type": "official company press release",
+      "sha256": "81f07206e4203eba97b7ac853e70e3e2562ec95d7420148f5c2428bee56a5ab4",
+      "body": "Coforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 |  | Next 12 months signed order book at $2.23 Bn, up 27% QoQ and 44% YoY\n\nPrinceton, NJ and Greater Noida, India, July 27, 2026– Coforge Limited (NSE: COFORGE), a global AI-native engineering services leader, today announced its financial results for the quarter ended June 30, 2026.\n\nKey Financial Highlights\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Financial Highlights | Revenue: INR 55,277 Mn / USD 592.2 Mn - up 49% YoY in INR terms, 33% in USD terms\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Financial Highlights | EBITDA: INR 11,233 Mn / USD 120.3 Mn – up 74% YoY in INR terms, up 55% in USD terms; EBITDA margin at 20.3%, increased by 285 bps YoY\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Financial Highlights | EBIT: INR 8,822 Mn / USD 94.5 Mn – up 101% YoY in INR terms, up 80% in USD terms. EBIT margin at 16.0%, increased by 414 bps YoY\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Financial Highlights | PAT: INR 5,186 Mn / USD 55.6 Mn – up 110% YoY in INR terms, up 46% in USD terms\n\nThe Board has recommended an interim dividend of INR 4/- per share, and the record date for this payout will be August 03, 2026\n\n“Our Q1 performance, with 21.1% sequential growth and 33.3% YoY growth in US dollar terms, reflects the strength of our differentiated capabilities and an execution intensity that is uniquely our own. The confluence of our next twelve month signed order book of $2.23 billion, an exceptionally strong large deal pipeline and differentiated capabilities with 86% of our revenues coming from AI-led engineering, data and cloud services has set us up to be the industry growth leader for the third year running. Our consolidated Q1 margins have come ahead of our annual margin guidance. The 414 bps YoY expansion in EBIT margin and 285 bps YoY expansion in EBITDA margin reflect the impact of AI infusion at scale in client delivery and internal operations. With the Encora acquisition completely operationally integrated and with strong demand, record visibility, and a rapidly expanding pipeline of AI-led opportunities, FY27 is shaping up to be an exceptional performance year for the firm.” said Sudhir Singh, Chief Executive Officer and Executive Director, Coforge Ltd\n\nKey Business Highlights\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Order Intake: $691 Mn TCV for the Quarter.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Executable Order Book over the next twelve months at $2.23 billion, a 27% QoQ increase.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Large Deal Momentum: Four large deals signed this quarter across North America, Europe and Latin America.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | LTM attrition was at 10.4 % compared to 10.8 % last quarter.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Launched Coforge Nuuron, an “AI Operating System” designed to help enterprises industrialize AI-driven outcomes across the business by orchestrating knowledge, decision intelligence, AI agents, and execution systems into a unified autonomous operating model.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Unveiled ‘NEXA Agentic AI Platform, a next-generation insurance business platform designed for the global insurance industry, marking a significant advancement in how insurers operationalize AI to drive measurable business outcomes.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Key Business Highlights | Announced Aeronova.AI an AI- enabled framework that helps airlines move safely from legacy PNR-based operations to order-led retailing without disrupting revenue or day-to-day performance.\n\nRecognitions\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” across US and Europe in ISG Digital Engineering Services 2026 Provider Lens Study.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Exceptional Performer” in Application Services and Cloud & Infrastructure Services in Whitelane Research’s 2026 UK & Ireland IT Sourcing Study\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” in three categories in the ISG ServiceNow Ecosystem Partners 2026 Provider Lens study\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” in Value Realisation and OptimizationServices for UK in ISG Salesforce Ecosystem Partners 2026 Provider Lens study.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” in Everest Group's Duck Creek Services PEAK Matrix® Assessment 2026\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” in Avasant’s Airline and Airports Digital Services RadarViewTM\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Recognitions | “Leader” in Process Automation Services in Nelson Hall’s Transforming Wealth and Asset Management Services NEAT 2026.\n\nPartnerships\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Partnerships | Honored with the Pega Industry Excellence Award: Government and Public Sector from Pegasystems. The award recognizes Coforge’s transformative work with a Scotland’s national telehealth service provider.\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Partnerships | Coforge added as a strategic services partner in the Zscaler AI-Guardian program. Coforge is working closely with Zscaler to help organisations securely adopt AI while extending Zero Trust principles across users, applications, devices, and data.\n\nAbout Coforge\n\nCoforge is an AI-native engineering services leader, where AI is the very foundation of how we design, build, and deliver intelligent solutions for our clients. We use AI and hyperspecialized industry expertise to engineer autonomous enterprises. We combine AI agents with our AI-enabled workforce, including specialized FDEs in hybrid pod-based delivery units. With a deep focus on trusted AI, our solutions are secure, governed, and enterprise-grade. We are outcome-led by design. Moving beyond AI experimentation, we deliver measurable business outcomes – lower operating costs, faster cycle times, higher conversion rates, and sustained margin growth.\n\nMedia Contact:\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Media Contact: | Investor Relations: investors@coforge.com\n\nCoforge delivers 49% YoY Growth, PAT increases 110% YoY | quarter ended June 30, 2026 | Media Contact: | Santanu Bhattacharya (India)- santanu.b@coforge.com\n\nFor more information, visit www.coforge.com\n\nForward Looking Statements Safe Harbor\n\nThis presentation contains forward-looking statements. In some cases, you can identify these forward-looking statements by the use of words such as “outlook,” “believes,” “expects,” “potential,” “continues,” “may,” “will,” “should,” “could,” “seeks,” “predicts,” “intends,” “trends,” “plans,” “estimates,” “anticipates” or the negative version of these words or other comparable words. Among other things, the outlook for the full fiscal year 2025, the business outlook and quotations from management in this announcement, as well as Coforge’s strategic and operational plans, contain forward-looking statements. Coforge may also make written or oral forward-looking statements in its periodic reports to regulators, in its annual report to shareholders, in press releases and other written materials and in oral statements made by its officers, directors or employees to third parties. Statements that are not historical facts, including statements about Coforge’s beliefs and expectations, are forward-looking statements. Forward-looking statements involve inherent risks and uncertainties. A number of factors could cause actual results to differ materially from those contained in any forward-looking statement, including but not limited to the following: the performance of the Coforge's clients; the successful implementation of its business strategy; its ability to compete effectively; its ability to maintain its pricing, control costs or continue to grow its business; the effects of the novel coronavirus (COVID-19) on its business; the continued service of certain of its key employees and management; its ability to attract and retain enough highly trained employees; and its involvement in any disputes, legal, regulatory, and other proceedings arising out of its business operations. All information provided in this presentation is as of the date of this presentation, and Coforge undertakes no obligation to update any forward-looking statement, except as required under applicable law.\n\nDisclaimer\n\nThis communication and the information contained herein is not an offer to sell securities in the United States or elsewhere. The securities of Coforge or any of its subsidiaries and affiliates may not be offered or sold in the United States or to, or for the account or benefit of U.S. person (as such term in defined in Regulation S under the U.S. Securities Act of 1933, as amended (the “Securities Act”)) absent registration pursuant to the Securities Act, or an exemption from registration. Any public offering of securities to be made in the United States will be made by means of a prospectus that may be obtained from the issuer or selling security holder and that will contain detailed information about the issuer and management, as well as financial statements. A Registration Statement on Form F-1 relating to certain securities of Coforge has been filed with the U.S. Securities and Exchange Commission but has not yet become effective. The Form F-1 Registration Statement and all subsequent amendments may be accessed through the SEC’s website at www.sec.gov. Such securities not be sold nor may offers to buy be accepted prior to the time the registration statement becomes effective under the Securities Act. Nothing in this communication shall constitute an offer to sell or the solicitation of an offer to buy securities in any jurisdiction in which such offer or sale would be unlawful.",
+      "trust": "high",
+      "status": "included",
+      "reason": "full company alias matches official identity",
+      "injection": false,
+      "removed_comments": ""
+    }
+  ],
+  "rejected": [],
+  "conflicts": [],
+  "temporal_differences": [],
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "prompt_sha256": "47d4f42d3ddaecb61d5a627c79acf921b6e86f2799fd91ddb88e2ffa6b9bb200",
+  "source_code_sha256": "0f4a4cb10c39dbc86a45e997f8a14168c7656a7758dd758bda757f7b01543035",
+  "tool_code_sha256": {
+    "orchestrator.py": "0f4a4cb10c39dbc86a45e997f8a14168c7656a7758dd758bda757f7b01543035",
+    "live_sources.py": "67c4cfd4db3fc796307828be840f2218c63dda89608d58fb41ecf48a5f949c31"
+  },
+  "run_dir": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241",
+  "fallback_reason": null,
+  "live_data": "explicit opt-in; user-supplied URLs only",
+  "live_fetches": [
+    {
+      "filename": "live_001.md",
+      "retrieved_url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+      "retrieved_at": "2026-10-15T20:40:16.528717+00:00",
+      "status": "success",
+      "content_type": "text/html",
+      "raw_sha256": "c839dc7a407f8f351e717f0ee424c5c2525369b117bd7f6530e63e6eaf9ef3e3",
+      "raw_bytes": 120456,
+      "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/live_sources/live_001.raw",
+      "published": "2026-07-27",
+      "date_evidence": "Princeton, NJ and Greater Noida, India, July 27, 2026– Coforge Limited (NSE: COFORGE), a global AI-native engineering services leader, today announced its financial results for the quarter ended June 30, 2026.",
+      "company_identity": "Coforge Limited (NSE: COFORGE)",
+      "coverage_gaps": [],
+      "sha256": "81f07206e4203eba97b7ac853e70e3e2562ec95d7420148f5c2428bee56a5ab4",
+      "normalized_sha256": "81f07206e4203eba97b7ac853e70e3e2562ec95d7420148f5c2428bee56a5ab4",
+      "normalized_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/live_sources/live_001.md"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1083,
+    "prompt_tokens": 4534,
+    "total_tokens": 6517
+  },
+  "model_validation": [],
+  "mode": "model",
+  "final_validation": [],
+  "word_count": 285,
+  "artifacts": {
+    "prompt": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/writer_system_prompt.md",
+    "request": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/request.json",
+    "response": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/response.json",
+    "brief": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/coforge/runs/20261015T204016-5ae29d1241/brief.md"
+  }
+}

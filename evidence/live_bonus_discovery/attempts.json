@@ -1,0 +1,21 @@
+[
+  {
+    "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q2-fy-2027",
+    "retrieved_at": "2026-10-15T20:20:56.797009+00:00",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.wipro.com/newsroom/press-releases/2026/wipro-announces-results-for-the-quarter-ended-september-30-2026/",
+    "retrieved_at": "2026-10-15T20:20:56.903273+00:00",
+    "status": 200,
+    "bytes": 151904,
+    "path": "evidence/live_bonus_discovery/probe_1.html"
+  },
+  {
+    "url": "https://www.wipro.com/newsroom/press-releases/2026/wipro-announces-results-for-the-quarter-ended-june-30-2026/",
+    "retrieved_at": "2026-10-15T20:20:59.370594+00:00",
+    "status": 200,
+    "bytes": 152920,
+    "path": "evidence/live_bonus_discovery/probe_2.html"
+  }
+]

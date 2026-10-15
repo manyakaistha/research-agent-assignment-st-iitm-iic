@@ -1,0 +1,16 @@
+{
+  "visible_content": "{\n  \"Snapshot\": [\n    {\n      \"text\": \"Sarvottam Cables Ltd is a manufacturer of power cables, wires and conductors.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E1\"}]\n    },\n    {\n      \"text\": \"Revenue from operations for the quarter ended 30 June 2026 was ₹1,248 crore, up 18.0% year‑on‑year.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E3\"}]\n    },\n    {\n      \"text\": \"Profit after tax for the quarter was ₹82 crore, a 5.9% increase from the prior year.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E6\"}]\n    },\n    {\n      \"text\": \"EBITDA margin fell to 11.2%, down 170 basis points from 12.9% a year earlier.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E5\"}]\n    }\n  ],\n  \"Bull case\": [\n    {\n      \"text\": \"The company says the new Bharuch plant will add about 30% to cable capacity and start commercial production in Q3 FY27.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E9\"}]\n    },\n    {\n      \"text\": \"The company says its order book rose to ₹3,900 crore as of 30 June 2026, up from ₹3,150 crore a year ago.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\":\"S3:E7\"}]\n    }\n  ],\n  \"Bear case\": [\n    {\n      \"text\": \"Operating margins contracted by 170 basis points to 11.2% as copper prices rose sharply.\",\n      \"citations\": [\"S1\"],\n      \"evidence\": [{\"id\":\"S1:E3\"}]\n    },\n    {\n      \"text\": \"Receivable days increased from 78 to 96 over the last year, driven by slower payments from large state utilities.\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\":\"S2:E5\"}]\n    },\n    {\n      \"text\": \"The company received a statutory demand of ₹46.3 crore and intends to file an appeal, stating it does not expect material impact.\",\n      \"citations\": [\"S7\"],\n      \"evidence\": [{\"id\":\"S7:E1\"},{\"id\":\"S7:E2\"}]\n    }\n  ],\n  \"Open questions\": [\n    {\n      \"text\": \"Revenue conflict: news report S1 states revenue rose to ₹1,428 crore, a 35% increase, while the official filing S3 reports revenue of ₹1,248 crore, an 18.0% YoY increase for the quarter ended 30 June 2026.\",\n      \"citations\": [\"S1\",\"S3\"],\n      \"evidence\": [{\"id\":\"S1:E2\"},{\"id\":\"S3:E3\"}]\n    },\n    {\n      \"text\": \"Historical pledge comparison: a 2024 news article reported promoters pledged 35% of their holding, whereas the June 2026 shareholding pattern shows pledged 4.1% of promoter holding.\",\n      \"citations\": [\"S4\",\"S8\"],\n      \"evidence\": [{\"id\":\"S4:E1\"},{\"id\":\"S8:E2\"}]\n    },\n    {\n      \"text\": \"How will the company address the rise in receivable days from 78 to 96, especially from large state utility customers?\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\":\"S2:E5\"}]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "queue_time": 0.22119706,
+    "prompt_tokens": 3795,
+    "prompt_time": 0.300238624,
+    "completion_tokens": 1847,
+    "completion_time": 3.846589311,
+    "total_tokens": 5642,
+    "total_time": 4.146827935,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1021
+    }
+  }
+}

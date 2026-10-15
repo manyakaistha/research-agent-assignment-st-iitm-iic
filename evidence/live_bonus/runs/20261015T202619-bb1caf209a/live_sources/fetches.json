@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "live_001.md",
+    "retrieved_url": "https://www.wipro.com/newsroom/press-releases/2026/wipro-announces-results-for-the-quarter-ended-september-30-2026/",
+    "retrieved_at": "2026-10-15T20:26:19.344419+00:00",
+    "status": "success",
+    "content_type": "text/html",
+    "raw_sha256": "157ba1bff890fa3e42d63b250edf381ca05acedc6ccaa124362d9d24cb3353f7",
+    "raw_bytes": 152201,
+    "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_bonus/runs/20261015T202619-bb1caf209a/live_sources/live_001.raw",
+    "published": "2026-10-15",
+    "date_evidence": "EAST BRUNSWICK, N.J. | BENGALURU, India – October 15, 2026: Wipro Limited (NYSE: WIT, BSE: 507685, NSE: WIPRO), a leading AI-powered technology services and consulting company, announced financial results under International Financial Reporting Standards (IFRS) for the quarter ended September 30, 2026.",
+    "company_identity": "Wipro Limited (NYSE: WIT, BSE: 507685, NSE: WIPRO)",
+    "coverage_gaps": [
+      "6 image(s) omitted; image-only content unavailable (no OCR)."
+    ],
+    "sha256": "875ff2c50e99f988f016e2cafc7bfb68f050d0882752ddaeb25b79d4ebe2a899",
+    "normalized_sha256": "875ff2c50e99f988f016e2cafc7bfb68f050d0882752ddaeb25b79d4ebe2a899",
+    "normalized_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_bonus/runs/20261015T202619-bb1caf209a/live_sources/live_001.md"
+  }
+]

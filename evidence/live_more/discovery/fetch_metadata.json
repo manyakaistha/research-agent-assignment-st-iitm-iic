@@ -1,0 +1,46 @@
+[
+  {
+    "file": "techmahindra_q1fy27.html",
+    "original_url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q1-fy27-results/",
+    "final_url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q1-fy27-results/",
+    "fetch_time_utc": "2026-10-15T20:31:28Z",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 167480,
+    "sha256": "39660e3ffeebe89c15f15fca412b5beb7970976be8dce678ec7547886d0d7b33",
+    "elapsed_seconds": 0.2
+  },
+  {
+    "file": "persistent_q1fy27.html",
+    "original_url": "https://www.persistent.com/media/press-releases/q1-fy27-results/",
+    "final_url": "https://www.persistent.com/media/press-releases/q1-fy27-results/",
+    "fetch_time_utc": "2026-10-15T20:31:28Z",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 329941,
+    "sha256": "0cb628bb37b587670e890b5d2b90a91bbab1f974253598d1fc5010bca44d1cb5",
+    "elapsed_seconds": 2.33
+  },
+  {
+    "file": "persistent_q2fy27.html",
+    "original_url": "https://www.persistent.com/media/press-releases/q2-fy27-results/",
+    "final_url": "https://validate.perfdrive.com/?ssa=f447fa29-786e-4af3-9f7b-80a2ea613f67&ssb=74015250060&ssc=https%3A%2F%2Fwww.persistent.com%2Fmedia%2Fpress-releases%2Fq2-fy27-results%2F&ssi=71bb2962-d452-41d6-9435-daebbf390308&ssk=botmanager_support@radware.com&ssm=40342294147759398105494924925526&ssn=8d92d0b45859806371565e8f890536995f9e9bbc3269-c53b-4813-b1b815&sso=4f243b6b-59b0522d9c41e605548b2256c99307b6a8b7e91b32d01c8b&ssp=72148842521792070457179205488853451&ssq=95218379632719546848896327168201682891877&ssr=MjQwNToyMDE6NzAwNDoxOWQ6OGNkMzo2ZWM0Ojc4NmU6NTEwNQ==&sst=Mozilla/5.0%20(compatible;%20results-discovery/1.0)&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5YmJjMzI2OS1jNTNiLTQ4MTMtYmI2Yi01OWIwNTIyZDljNDExLTE3OTIwOTYzMjc1NzYwLTAwNWFiODU3NmZiOGEwODA2ZWYxMCJ9",
+    "fetch_time_utc": "2026-10-15T20:32:07Z",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 15132,
+    "sha256": "2f83bfe6fca75e704be461e51db20771737a90f33376d3e22f27976630d66651",
+    "elapsed_seconds": 1.44
+  },
+  {
+    "file": "coforge_q1fy27.html",
+    "original_url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+    "fetch_time_utc": "2026-10-15T20:36:15Z",
+    "status": 200,
+    "final_url": "https://news.coforge.com/newsroom/press-release/coforge-delivers-49-yoy-growth-pat-increases-110-yoy",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 120456,
+    "sha256": "45b2101c249dd0be5743d46d2e7192e91e1fed1f47d35a55c4897c28bb6606a5",
+    "elapsed_seconds": 1.12
+  }
+]

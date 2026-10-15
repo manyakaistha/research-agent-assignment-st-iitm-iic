@@ -1,0 +1,73 @@
+test_constant_currency_growth_is_not_reported_growth (test_live_review.LiveFinancialReviewTests.test_constant_currency_growth_is_not_reported_growth) ... FAIL
+test_gross_revenue_is_not_net_income (test_live_review.LiveFinancialReviewTests.test_gross_revenue_is_not_net_income) ... FAIL
+test_segment_margin_is_not_company_wide_margin (test_live_review.LiveFinancialReviewTests.test_segment_margin_is_not_company_wide_margin) ... FAIL
+test_unstated_consolidated_scope_is_rejected (test_live_review.LiveFinancialReviewTests.test_unstated_consolidated_scope_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_constant_currency_growth_is_not_reported_growth (test_live_review.LiveFinancialReviewTests.test_constant_currency_growth_is_not_reported_growth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 28, in test_constant_currency_growth_is_not_reported_growth
+    self.reject('Reported IT Services revenue increased 0.6% YoY.',
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                'Non-GAAP constant currency [2] IT Services segment revenue was flat sequentially and increase of 0.6% YoY.')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 16, in reject
+    self.assertTrue(o.validate(sections, [source], [],
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               o.render(sections, [source], []), model=True))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_gross_revenue_is_not_net_income (test_live_review.LiveFinancialReviewTests.test_gross_revenue_is_not_net_income)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 24, in test_gross_revenue_is_not_net_income
+    self.reject("Wipro's net income was ₹247.5 billion.",
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                'Gross revenue at ₹247.5 billion ($2,583.0 million [1] ), an increase of 1.1% QoQ and 9.1% YoY.')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 16, in reject
+    self.assertTrue(o.validate(sections, [source], [],
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               o.render(sections, [source], []), model=True))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_segment_margin_is_not_company_wide_margin (test_live_review.LiveFinancialReviewTests.test_segment_margin_is_not_company_wide_margin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 32, in test_segment_margin_is_not_company_wide_margin
+    self.reject('Company-wide operating margin was 16.5%.',
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                'IT services operating margin [5] for Q2’27 was at 16.5%, up by 0.5% QoQ and down by 0.2% YoY.')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 16, in reject
+    self.assertTrue(o.validate(sections, [source], [],
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               o.render(sections, [source], []), model=True))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_unstated_consolidated_scope_is_rejected (test_live_review.LiveFinancialReviewTests.test_unstated_consolidated_scope_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 20, in test_unstated_consolidated_scope_is_rejected
+    self.reject("Wipro's consolidated gross revenue was ₹247.5 billion.",
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                'Gross revenue at ₹247.5 billion ($2,583.0 million [1] ), an increase of 1.1% QoQ and 9.1% YoY.')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_live_review.py", line 16, in reject
+    self.assertTrue(o.validate(sections, [source], [],
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               o.render(sections, [source], []), model=True))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+FAILED (failures=4)

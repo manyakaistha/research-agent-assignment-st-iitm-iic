@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "live_001.md",
+    "retrieved_url": "https://www.techmahindra.com/insights/press-releases/techmahindra-q2-fy27-results/",
+    "retrieved_at": "2026-10-15T20:35:05.880045+00:00",
+    "status": "success",
+    "content_type": "text/html",
+    "raw_sha256": "d1d652063e0f4d5805bd74eeddf8e21f868dae5baaa6b35168694c686c94d16a",
+    "raw_bytes": 166870,
+    "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/techm/runs/20261015T203505-6942581d88/live_sources/live_001.raw",
+    "published": "2026-10-15",
+    "date_evidence": "October 15, 2026",
+    "company_identity": "Tech Mahindra (NSE: TECHM, BSE: 532755)",
+    "coverage_gaps": [
+      "HTML table omitted: merged or ambiguous header/row structure; table metrics unavailable."
+    ],
+    "sha256": "929c08a5b6b2530bd8e43dda3a1a06f313d8f038f64c8f3d6e3ed3afe56510b6",
+    "normalized_sha256": "929c08a5b6b2530bd8e43dda3a1a06f313d8f038f64c8f3d6e3ed3afe56510b6",
+    "normalized_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/techm/runs/20261015T203505-6942581d88/live_sources/live_001.md"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "live_001.md",
+    "retrieved_url": "https://www.persistent.com/media/press-releases/q1-fy27-results/",
+    "retrieved_at": "2026-10-15T20:35:07.026644+00:00",
+    "status": "failed",
+    "http_status": 302,
+    "raw_sha256": "0ead7f5d31058be374b50c74872e6eadb44103f022bc81722822eecaa9736f93",
+    "raw_bytes": 1386,
+    "raw_truncated": false,
+    "raw_snapshot": "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/evidence/live_more/persistent/runs/20261015T203507-8f098174f9/live_sources/live_001.raw",
+    "failure": "Live retrieval failed: HTTPError"
+  }
+]
