@@ -1,0 +1,84 @@
+test_api_failure_falls_back_and_keeps_request (test_orchestrator.OrchestratorTests.test_api_failure_falls_back_and_keeps_request) ... ok
+test_custom_keyless_routing (test_orchestrator.OrchestratorTests.test_custom_keyless_routing) ... ok
+test_empty_truncated_and_malformed_model_fallback (test_orchestrator.OrchestratorTests.test_empty_truncated_and_malformed_model_fallback) ... ok
+test_limits_live_gate_and_review_distinctness (test_orchestrator.OrchestratorTests.test_limits_live_gate_and_review_distinctness) ... ok
+test_metadata_invalid_duplicate_future_url_and_symlink (test_orchestrator.OrchestratorTests.test_metadata_invalid_duplicate_future_url_and_symlink) ... ok
+test_missing_empty_wrong_ticker_and_write_guard (test_orchestrator.OrchestratorTests.test_missing_empty_wrong_ticker_and_write_guard) ... ok
+test_offline_deterministic_and_immutable (test_orchestrator.OrchestratorTests.test_offline_deterministic_and_immutable) ... ok
+test_pack_identity_injection_conflicts_and_temporal (test_orchestrator.OrchestratorTests.test_pack_identity_injection_conflicts_and_temporal) ... ok
+test_source_removal_has_no_hardcoded_numbers (test_orchestrator.OrchestratorTests.test_source_removal_has_no_hardcoded_numbers) ... ok
+test_validator_rejects_wrong_citations_and_injection (test_orchestrator.OrchestratorTests.test_validator_rejects_wrong_citations_and_injection) ... ok
+test_different_periods_not_called_conflict (test_review.IndependentReviewTests.test_different_periods_not_called_conflict) ... FAIL
+test_false_claim_with_unrelated_exact_quote_rejected (test_review.IndependentReviewTests.test_false_claim_with_unrelated_exact_quote_rejected) ... FAIL
+test_generated_run_artifacts_stay_outside_input (test_review.IndependentReviewTests.test_generated_run_artifacts_stay_outside_input) ... FAIL
+test_same_period_late_correction_detected (test_review.IndependentReviewTests.test_same_period_late_correction_detected) ... FAIL
+test_unrelated_company_mentions_target_is_excluded (test_review.IndependentReviewTests.test_unrelated_company_mentions_target_is_excluded) ... FAIL
+test_wrong_metric_and_negative_sign_rejected (test_review.IndependentReviewTests.test_wrong_metric_and_negative_sign_rejected) ... FAIL
+
+======================================================================
+FAIL: test_different_periods_not_called_conflict (test_review.IndependentReviewTests.test_different_periods_not_called_conflict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 47, in test_different_periods_not_called_conflict
+    self.assertFalse(conflicts)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: [{'metric': 'revenue / associated growth', 'reports': [{'source': 'S1', 'value': '1,428', 'evidence': 'Revenue from operations rose to ₹1,428 crore, a 35% increase from the year-ago period, the company said in an exchange filing on Friday.', 'period': 'latest reported quarter', 'growth': '35'}, {'source': 'S3', 'value': '1,248', 'evidence': '| ₹ crore | Q1 FY27 | Q1 FY26 | YoY | | Revenue from operations | 1,248 | 1,058 | +18.0% |', 'period': 'latest reported quarter', 'growth': '+18.0'}], 'resolution': 'Prefer official filing; retain discrepancy as an open question'}] is not false
+
+======================================================================
+FAIL: test_false_claim_with_unrelated_exact_quote_rejected (test_review.IndependentReviewTests.test_false_claim_with_unrelated_exact_quote_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 27, in test_false_claim_with_unrelated_exact_quote_rejected
+    self.assertTrue(o.validate(sections,sources,[],o.render(sections,sources,[]),model=True))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_generated_run_artifacts_stay_outside_input (test_review.IndependentReviewTests.test_generated_run_artifacts_stay_outside_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 64, in test_generated_run_artifacts_stay_outside_input
+    self.assertEqual(before,{str(p.relative_to(docs)) for p in docs.rglob('*')})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'20261015T174240-2a77a0a69e/brief.md'
+'20261015T174240-2a77a0a69e/audit.json'
+'20261015T174240-2a77a0a69e/writer_system_prompt.md'
+'20261015T174240-2a77a0a69e'
+
+======================================================================
+FAIL: test_same_period_late_correction_detected (test_review.IndependentReviewTests.test_same_period_late_correction_detected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 40, in test_same_period_late_correction_detected
+    self.assertTrue(conflicts)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_unrelated_company_mentions_target_is_excluded (test_review.IndependentReviewTests.test_unrelated_company_mentions_target_is_excluded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 54, in test_unrelated_company_mentions_target_is_excluded
+    self.assertEqual(news.status, 'excluded')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'included' != 'excluded'
+- included
+? ^^
++ excluded
+? ^^
+
+
+======================================================================
+FAIL: test_wrong_metric_and_negative_sign_rejected (test_review.IndependentReviewTests.test_wrong_metric_and_negative_sign_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/SuperTraders_AI_Innovator_Assignment/tests/test_review.py", line 33, in test_wrong_metric_and_negative_sign_rejected
+    self.assertTrue(o.validate(sections,sources,[],o.render(sections,sources,[]),model=True))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.088s
+
+FAILED (failures=6)

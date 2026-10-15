@@ -1,0 +1,29 @@
+{
+  "selected_provider": "groq",
+  "selected_model": "qwen/qwen3.8-27b",
+  "generation_mode": "model",
+  "final_word_count": 395,
+  "headings": [
+    "Snapshot",
+    "Bull case",
+    "Bear case",
+    "Open questions",
+    "Sources"
+  ],
+  "final_validation_errors": [],
+  "original_files_changed": [],
+  "selected_brief_byte_identical": true,
+  "selected_audit_byte_identical": true,
+  "code_hash_matches": true,
+  "prompt_hash_matches": true,
+  "offline_runs_mode": [
+    "offline",
+    "offline"
+  ],
+  "offline_cli_deterministic": true,
+  "credential_leaks": [],
+  "live_fetches_in_selected_run": [],
+  "required_files_present": true,
+  "tests": "25 unittest tests passed; see evidence/tests_final.txt",
+  "independent_review": "PASS; evidence/adversarial_final.md and evidence/implementation_review_latest.md"
+}

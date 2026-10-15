@@ -1,0 +1,27 @@
+test_actual_keyless_http_gateway_and_failure_fallback (test_integration.LiveAndGatewayTests.test_actual_keyless_http_gateway_and_failure_fallback) ... ok
+test_additional_profit_conflict (test_integration.LiveAndGatewayTests.test_additional_profit_conflict) ... ok
+test_intended_appeal_not_active_appeal (test_integration.LiveAndGatewayTests.test_intended_appeal_not_active_appeal) ... ok
+test_live_markdown_ingested_without_following_provenance_url (test_integration.LiveAndGatewayTests.test_live_markdown_ingested_without_following_provenance_url) ... ok
+test_live_private_address_rejected_before_request (test_integration.LiveAndGatewayTests.test_live_private_address_rejected_before_request) ... ok
+test_live_requires_optin_and_fictional_never_fetches (test_integration.LiveAndGatewayTests.test_live_requires_optin_and_fictional_never_fetches) ... ok
+test_api_failure_falls_back_and_keeps_request (test_orchestrator.OrchestratorTests.test_api_failure_falls_back_and_keeps_request) ... ok
+test_custom_keyless_routing (test_orchestrator.OrchestratorTests.test_custom_keyless_routing) ... ok
+test_empty_truncated_and_malformed_model_fallback (test_orchestrator.OrchestratorTests.test_empty_truncated_and_malformed_model_fallback) ... ok
+test_limits_live_gate_and_review_distinctness (test_orchestrator.OrchestratorTests.test_limits_live_gate_and_review_distinctness) ... ok
+test_metadata_invalid_duplicate_future_url_and_symlink (test_orchestrator.OrchestratorTests.test_metadata_invalid_duplicate_future_url_and_symlink) ... ok
+test_missing_empty_wrong_ticker_and_write_guard (test_orchestrator.OrchestratorTests.test_missing_empty_wrong_ticker_and_write_guard) ... ok
+test_offline_deterministic_and_immutable (test_orchestrator.OrchestratorTests.test_offline_deterministic_and_immutable) ... ok
+test_pack_identity_injection_conflicts_and_temporal (test_orchestrator.OrchestratorTests.test_pack_identity_injection_conflicts_and_temporal) ... ok
+test_source_removal_has_no_hardcoded_numbers (test_orchestrator.OrchestratorTests.test_source_removal_has_no_hardcoded_numbers) ... ok
+test_validator_rejects_wrong_citations_and_injection (test_orchestrator.OrchestratorTests.test_validator_rejects_wrong_citations_and_injection) ... ok
+test_different_periods_not_called_conflict (test_review.IndependentReviewTests.test_different_periods_not_called_conflict) ... ok
+test_false_claim_with_unrelated_exact_quote_rejected (test_review.IndependentReviewTests.test_false_claim_with_unrelated_exact_quote_rejected) ... ok
+test_generated_run_artifacts_stay_outside_input (test_review.IndependentReviewTests.test_generated_run_artifacts_stay_outside_input) ... ok
+test_same_period_late_correction_detected (test_review.IndependentReviewTests.test_same_period_late_correction_detected) ... ok
+test_unrelated_company_mentions_target_is_excluded (test_review.IndependentReviewTests.test_unrelated_company_mentions_target_is_excluded) ... ok
+test_wrong_metric_and_negative_sign_rejected (test_review.IndependentReviewTests.test_wrong_metric_and_negative_sign_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.135s
+
+OK

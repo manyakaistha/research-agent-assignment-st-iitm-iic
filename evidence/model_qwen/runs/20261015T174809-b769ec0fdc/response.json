@@ -1,0 +1,16 @@
+{
+  "visible_content": "{\n  \"Snapshot\": [\n    {\"text\": \"Sarvottam Cables manufactures power cables, wires, and conductors.\", \"citations\": [\"S3\"], \"evidence\": [{\"id\": \"S3:E2\"}]},\n    {\"text\": \"Consolidated Q1 FY27 revenue was ₹1,248 crore, up 18.0% YoY.\", \"citations\": [\"S3\"], \"evidence\": [{\"id\": \"S3:E4\"}]},\n    {\"text\": \"Profit after tax was ₹82 crore, up 5.9% YoY.\", \"citations\": [\"S3\"], \"evidence\": [{\"id\": \"S3:E7\"}]},\n    {\"text\": \"EBITDA margin was 11.2%, down 170 bps year-on-year.\", \"citations\": [\"S3\"], \"evidence\": [{\"id\": \"S3:E6\"}]}\n  ],\n  \"Bull case\": [\n    {\"text\": \"Order book reached ₹3,900 crore as of 30 June 2026, and the company maintains FY27 revenue growth guidance of 15 to 17 percent.\", \"citations\": [\"S3\", \"S2\"], \"evidence\": [{\"id\": \"S3:E8\"}, {\"id\": \"S2:E1\"}]},\n    {\"text\": \"The company plans the Bharuch plant (adding about 30% capacity) to begin commercial production in Q3 FY27; management expects data-centre cables to double from about 9% of domestic revenue within two years.\", \"citations\": [\"S3\", \"S2\"], \"evidence\": [{\"id\": \"S3:E10\"}, {\"id\": \"S2:E3\"}]}\n  ],\n  \"Bear case\": [\n    {\"text\": \"EBITDA margin fell 170 bps as copper rose nearly 14%; the MD says price-variation clauses reset with a one-to-two-quarter lag.\", \"citations\": [\"S3\", \"S1\", \"S2\"], \"evidence\": [{\"id\": \"S3:E6\"}, {\"id\": \"S1:E4\"}, {\"id\": \"S2:E7\"}]},\n    {\"text\": \"Receivable days rose from 78 to 96, mainly from two large state utility customers with slower payments.\", \"citations\": [\"S2\"], \"evidence\": [{\"id\": \"S2:E11\"}, {\"id\": \"S2:E12\"}]},\n    {\"text\": \"The company says it received a ₹46.3 crore GST demand for FY20-21 and FY21-22 and intends to file an appeal; it does not expect material impact.\", \"citations\": [\"S7\"], \"evidence\": [{\"id\": \"S7:E1\"}, {\"id\": \"S7:E2\"}, {\"id\": \"S7:E3\"}]}\n  ],\n  \"Open questions\": [\n    {\"text\": \"Revenue conflict: the official consolidated filing reports ₹1,248 crore (+18.0% YoY) for Q1 FY27, while a news report cites ₹1,428 crore (+35%) for the same April–June quarter; the official figure is preferred.\", \"citations\": [\"S3\", \"S1\"], \"evidence\": [{\"id\": \"S3:E4\"}, {\"id\": \"S1:E2\"}]},\n    {\"text\": \"Will the company pass on the copper cost increase within the stated two-quarter lag, and will EBITDA margins recover?\", \"citations\": [\"S2\", \"S3\"], \"evidence\": [{\"id\": \"S2:E7\"}, {\"id\": \"S3:E13\"}]},\n    {\"text\": \"What is the outcome of the ₹46.3 crore GST appeal, and will the two state utility customers continue to delay payments at 96 receivable days?\", \"citations\": [\"S7\", \"S2\"], \"evidence\": [{\"id\": \"S7:E1\"}, {\"id\": \"S2:E11\"}]}\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "queue_time": 0.045672294,
+    "prompt_tokens": 6064,
+    "prompt_time": 0.446401967,
+    "completion_tokens": 2398,
+    "completion_time": 4.694808631,
+    "total_tokens": 8462,
+    "total_time": 5.141210598,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1499
+    }
+  }
+}

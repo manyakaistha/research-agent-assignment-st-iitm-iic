@@ -1,0 +1,82 @@
+[
+  {
+    "id": "S1",
+    "path": "AI innovator assignment/businessdaily_2026-08-09.md",
+    "metadata": {
+      "source": "Business Daily Online (news website)",
+      "url": "https://businessdaily.example/markets/sarvottam-cables-q1-results",
+      "published": "2026-08-09",
+      "type": "news article"
+    }
+  },
+  {
+    "id": "S2",
+    "path": "AI innovator assignment/ir_concall_2026-08-11.md",
+    "metadata": {
+      "source": "Q1 FY27 earnings call transcript (excerpt), hosted on company IR site",
+      "url": "https://ir.sarvottamcables.example/transcripts/q1fy27.pdf",
+      "published": "2026-08-11",
+      "type": "official company transcript"
+    }
+  },
+  {
+    "id": "S3",
+    "path": "AI innovator assignment/ir_press_release_2026-08-08.md",
+    "metadata": {
+      "source": "Sarvottam Cables Ltd, investor relations (company press release)",
+      "url": "https://ir.sarvottamcables.example/press/q1fy27",
+      "published": "2026-08-08",
+      "type": "official company filing"
+    }
+  },
+  {
+    "id": "S4",
+    "path": "AI innovator assignment/marketwatchindia_2024-03-18.md",
+    "metadata": {
+      "source": "Market Watch India (news website)",
+      "url": "https://marketwatchindia.example/2024/03/sarvottam-promoter-pledge",
+      "published": "2024-03-18",
+      "type": "news article"
+    }
+  },
+  {
+    "id": "S5",
+    "path": "AI innovator assignment/multibaggeralerts_2026-08-12.md",
+    "metadata": {
+      "source": "MultibaggerAlertsIndia (stock tips blog)",
+      "url": "https://multibaggeralerts.example/srvcable-strong-buy",
+      "published": "2026-08-12",
+      "type": "blog post"
+    }
+  },
+  {
+    "id": "S6",
+    "path": "AI innovator assignment/nagpurcitytimes_2026-08-20.md",
+    "metadata": {
+      "source": "Nagpur City Times (local news website)",
+      "url": "https://nagpurcitytimes.example/news/sarvottam-cable-network-penalty",
+      "published": "2026-08-20",
+      "type": "news article"
+    }
+  },
+  {
+    "id": "S7",
+    "path": "AI innovator assignment/nse_announcement_2026-09-02.md",
+    "metadata": {
+      "source": "NSE corporate announcement (company disclosure)",
+      "url": "https://nse.example/announcements/SRVCABLE/2026-09-02",
+      "published": "2026-09-02",
+      "type": "official exchange filing"
+    }
+  },
+  {
+    "id": "S8",
+    "path": "AI innovator assignment/nse_shareholding_2026-07-15.md",
+    "metadata": {
+      "source": "NSE shareholding pattern filing (summary)",
+      "url": "https://nse.example/shareholding/SRVCABLE/2026-06",
+      "published": "2026-07-15",
+      "type": "official exchange filing"
+    }
+  }
+]

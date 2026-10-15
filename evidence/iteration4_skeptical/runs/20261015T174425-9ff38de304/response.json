@@ -1,0 +1,16 @@
+{
+  "visible_content": "{\n  \"Snapshot\": [\n    {\n      \"text\": \"Revenue from operations for Q1 FY27 was ₹1,248 crore, up 18.0% YoY.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\": \"S3:E4\"}]\n    },\n    {\n      \"text\": \"Profit after tax for the quarter was ₹82 crore, a 5.9% increase from the prior year.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\": \"S3:E7\"}]\n    },\n    {\n      \"text\": \"EBITDA margin fell to 11.2% from 12.9% YoY, a decline of 170 basis points.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\": \"S3:E6\"}]\n    }\n  ],\n  \"Bull case\": [\n    {\n      \"text\": \"The order book stood at ₹3,900 crore as of 30 June 2026, up from ₹3,150 crore a year earlier.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\": \"S3:E8\"}]\n    },\n    {\n      \"text\": \"Management plans to commence commercial production at the Bharuch plant in Q3 FY27, adding about 30% to capacity, and expects to pass on higher copper costs over the next two quarters.\",\n      \"citations\": [\"S3\"],\n      \"evidence\": [{\"id\": \"S3:E10\"}, {\"id\": \"S3:E13\"}]\n    }\n  ],\n  \"Bear case\": [\n    {\n      \"text\": \"Operating margins contracted by 170 basis points to 11.2% as copper prices rose roughly 14% during the quarter.\",\n      \"citations\": [\"S1\", \"S3\"],\n      \"evidence\": [{\"id\": \"S1:E4\"}, {\"id\": \"S3:E6\"}]\n    },\n    {\n      \"text\": \"Receivable days increased from 78 to 96 days over the last year, reflecting slower payments from large state utility customers.\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\": \"S2:E11\"}]\n    },\n    {\n      \"text\": \"The company has received a GST demand of ₹46.3 crore for FY2020‑21 and FY2021‑22; it intends to appeal but does not expect a material impact on its finances.\",\n      \"citations\": [\"S7\"],\n      \"evidence\": [{\"id\": \"S7:E1\"}, {\"id\": \"S7:E3\"}]\n    }\n  ],\n  \"Open questions\": [\n    {\n      \"text\": \"Revenue conflict: S1 reports ₹1,428 crore (35% growth) while S3 reports ₹1,248 crore (18% growth); the official filing (S3) is preferred.\",\n      \"citations\": [\"S1\", \"S3\"],\n      \"evidence\": [{\"id\": \"S1:E2\"}, {\"id\": \"S3:E4\"}]\n    },\n    {\n      \"text\": \"Promoter pledge trend: S4 states pledged 35% of promoter holding in 2024, whereas S8 shows pledged 4.1% as of June 2026; clarification of current pledge level is needed.\",\n      \"citations\": [\"S4\", \"S8\"],\n      \"evidence\": [{\"id\": \"S4:E1\"}, {\"id\": \"S8:E2\"}]\n    },\n    {\n      \"text\": \"Will the rise in receivable days and concentration with large state utilities affect cash collection?\",\n      \"citations\": [\"S2\"],\n      \"evidence\": [{\"id\": \"S2:E11\"}]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "queue_time": 0.305602592,
+    "prompt_tokens": 5615,
+    "prompt_time": 0.274054211,
+    "completion_tokens": 2681,
+    "completion_time": 5.605858224,
+    "total_tokens": 8296,
+    "total_time": 5.879912435,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1881
+    }
+  }
+}

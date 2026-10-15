@@ -1,0 +1,383 @@
+[
+  {
+    "experiment": "iteration1",
+    "review": "balanced",
+    "model": "openai/gpt-oss-120b",
+    "mode": "offline",
+    "fallback_reason": "API HTTP 403",
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 453,
+    "prompt_sha256": "30d2471bd44746d1d391c000134dbd782c83856531b35980b18b0ce9b307461a",
+    "source_code_sha256": null,
+    "usage": null
+  },
+  {
+    "experiment": "iteration2_balanced",
+    "review": "balanced",
+    "model": "openai/gpt-oss-120b",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: evidence quote absent from cited source; missing explicit revenue conflict; unsupported numeric claim",
+    "model_validation": [
+      "evidence quote absent from cited source",
+      "missing explicit revenue conflict",
+      "unsupported numeric claim"
+    ],
+    "final_validation": [],
+    "word_count": 457,
+    "prompt_sha256": "30d2471bd44746d1d391c000134dbd782c83856531b35980b18b0ce9b307461a",
+    "source_code_sha256": null,
+    "usage": {
+      "queue_time": 0.423748564,
+      "prompt_tokens": 3215,
+      "prompt_time": 0.195196008,
+      "completion_tokens": 2658,
+      "completion_time": 5.548810956,
+      "total_tokens": 5873,
+      "total_time": 5.744006964,
+      "completion_tokens_details": {
+        "reasoning_tokens": 774
+      }
+    }
+  },
+  {
+    "experiment": "iteration3_conservative",
+    "review": "conservative",
+    "model": "openai/gpt-oss-120b",
+    "mode": "model",
+    "fallback_reason": null,
+    "model_validation": [],
+    "final_validation": [],
+    "word_count": 330,
+    "prompt_sha256": "151e6a3ac53a311f0a7ff2de58d298e3e8f0b95a758e4729993579b5ac7ec573",
+    "source_code_sha256": null,
+    "usage": {
+      "queue_time": 0.215237395,
+      "prompt_tokens": 3262,
+      "prompt_time": 0.20967675,
+      "completion_tokens": 3961,
+      "completion_time": 8.254115203,
+      "total_tokens": 7223,
+      "total_time": 8.463791953,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2655
+      }
+    }
+  },
+  {
+    "experiment": "iteration4_skeptical",
+    "review": "skeptical",
+    "model": "openai/gpt-oss-120b",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: unsupported numeric claim in selected evidence",
+    "model_validation": [
+      "unsupported numeric claim in selected evidence"
+    ],
+    "final_validation": [],
+    "word_count": 457,
+    "prompt_sha256": "9f3cac0fe33538d4801ecd32c9f63d1f823082e5852cd0280569ebc35cc68e97",
+    "source_code_sha256": "a66a7a303e07a7bff06b3bdd967c8b4d3e449afb046aae66272ded27a1d25bd0",
+    "usage": {
+      "queue_time": 0.305602592,
+      "prompt_tokens": 5615,
+      "prompt_time": 0.274054211,
+      "completion_tokens": 2681,
+      "completion_time": 5.605858224,
+      "total_tokens": 8296,
+      "total_time": 5.879912435,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1881
+      }
+    }
+  },
+  {
+    "experiment": "iteration5_skeptical",
+    "review": "skeptical",
+    "model": "openai/gpt-oss-120b",
+    "mode": "model",
+    "fallback_reason": null,
+    "model_validation": [],
+    "final_validation": [],
+    "word_count": 387,
+    "prompt_sha256": "641dd4e3815d844e9ed0bbfac361cfb4805f0911074868955d24911237ce1323",
+    "source_code_sha256": "f281f1df36eb334752caf70b7caaea03f35d03bd7b0f0a907192d2b77723f768",
+    "usage": {
+      "queue_time": 0.212661178,
+      "prompt_tokens": 5647,
+      "prompt_time": 0.296363793,
+      "completion_tokens": 2297,
+      "completion_time": 4.794533541,
+      "total_tokens": 7944,
+      "total_time": 5.090897334,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1466
+      }
+    }
+  },
+  {
+    "experiment": "model_gemini25",
+    "review": "skeptical",
+    "model": "gemini-2.5-flash",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: unsupported numeric claim in selected evidence",
+    "model_validation": [
+      "unsupported numeric claim in selected evidence"
+    ],
+    "final_validation": [],
+    "word_count": 435,
+    "prompt_sha256": "a416de6d94502c4cc62a9fc1f3bcf05207e33c42fd2d6ac8f6a1ec9571e40274",
+    "source_code_sha256": "e9b79d2fc51c1072439e4cd919c86ef2c3d4b4c9843cf6edc753222032a198d5",
+    "usage": {
+      "completion_tokens": 1343,
+      "prompt_tokens": 4042,
+      "total_tokens": 6183
+    }
+  },
+  {
+    "experiment": "model_gemini25_v2",
+    "review": "skeptical",
+    "model": "gemini-2.5-flash",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: table value does not match claimed reporting period; unsupported numeric claim in selected evidence",
+    "model_validation": [
+      "table value does not match claimed reporting period",
+      "unsupported numeric claim in selected evidence"
+    ],
+    "final_validation": [],
+    "word_count": 489,
+    "prompt_sha256": "a416de6d94502c4cc62a9fc1f3bcf05207e33c42fd2d6ac8f6a1ec9571e40274",
+    "source_code_sha256": "78dfb4dc7f8e8dce3b55175f1bbf9201b9229aefcea1300a210841265cb960df",
+    "usage": {
+      "completion_tokens": 1246,
+      "prompt_tokens": 3729,
+      "prompt_tokens_details": {
+        "cached_tokens": 996
+      },
+      "total_tokens": 5797
+    }
+  },
+  {
+    "experiment": "model_gemini25_v3",
+    "review": "skeptical",
+    "model": "gemini-2.5-flash",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: missing dated historical/current pledge comparison with denominator",
+    "model_validation": [
+      "missing dated historical/current pledge comparison with denominator"
+    ],
+    "final_validation": [],
+    "word_count": 489,
+    "prompt_sha256": "652040a2f9f9701cd02b51620f964717d9d8c51a867c920ee52753a2ee29c693",
+    "source_code_sha256": "3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db",
+    "usage": {
+      "completion_tokens": 1325,
+      "prompt_tokens": 3835,
+      "total_tokens": 5894
+    }
+  },
+  {
+    "experiment": "model_gemini25pro",
+    "review": "skeptical",
+    "model": "gemini-2.5-pro",
+    "mode": "offline",
+    "fallback_reason": "API HTTP 404",
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 489,
+    "prompt_sha256": "4868021964cc0a59bfe2361295bd11f8d599536c0972998fcf86f584999b2d23",
+    "source_code_sha256": "3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db",
+    "usage": null
+  },
+  {
+    "experiment": "model_gemini3",
+    "review": "skeptical",
+    "model": "gemini-3-flash-preview",
+    "mode": "offline",
+    "fallback_reason": "API HTTP 503",
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 435,
+    "prompt_sha256": "a416de6d94502c4cc62a9fc1f3bcf05207e33c42fd2d6ac8f6a1ec9571e40274",
+    "source_code_sha256": "e9b79d2fc51c1072439e4cd919c86ef2c3d4b4c9843cf6edc753222032a198d5",
+    "usage": null
+  },
+  {
+    "experiment": "model_gemini38",
+    "review": "skeptical",
+    "model": "gemini-3.8-flash",
+    "mode": "offline",
+    "fallback_reason": "API HTTP 503",
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 435,
+    "prompt_sha256": "a416de6d94502c4cc62a9fc1f3bcf05207e33c42fd2d6ac8f6a1ec9571e40274",
+    "source_code_sha256": "e9b79d2fc51c1072439e4cd919c86ef2c3d4b4c9843cf6edc753222032a198d5",
+    "usage": null
+  },
+  {
+    "experiment": "model_gptoss20b",
+    "review": "skeptical",
+    "model": "openai/gpt-oss-20b",
+    "mode": "model",
+    "fallback_reason": null,
+    "model_validation": [],
+    "final_validation": [],
+    "word_count": 356,
+    "prompt_sha256": "641dd4e3815d844e9ed0bbfac361cfb4805f0911074868955d24911237ce1323",
+    "source_code_sha256": "76eebd75ba8e1032cb62c153e0402a3c906837e01056ad1399067402788f5df8",
+    "usage": {
+      "queue_time": 0.394250416,
+      "prompt_tokens": 5647,
+      "prompt_time": 0.282508012,
+      "completion_tokens": 1785,
+      "completion_time": 1.8080813070000001,
+      "total_tokens": 7432,
+      "total_time": 2.0905893190000002,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1140
+      }
+    }
+  },
+  {
+    "experiment": "model_gptoss20b_v2",
+    "review": "skeptical",
+    "model": "openai/gpt-oss-20b",
+    "mode": "model",
+    "fallback_reason": null,
+    "model_validation": [],
+    "final_validation": [],
+    "word_count": 336,
+    "prompt_sha256": "2daa108bce61eecdeebe107ab1980a3d5ca438e72a3ff18182c74efe17eb7eef",
+    "source_code_sha256": "7c62c2ec718a60082815ded72eae7143ce6d055ee12a55d29308e96658bdecba",
+    "usage": {
+      "queue_time": 0.212557834,
+      "prompt_tokens": 5702,
+      "prompt_time": 0.340398487,
+      "completion_tokens": 1732,
+      "completion_time": 1.839828975,
+      "total_tokens": 7434,
+      "total_time": 2.180227462,
+      "completion_tokens_details": {
+        "reasoning_tokens": 845
+      }
+    }
+  },
+  {
+    "experiment": "model_qwen",
+    "review": "skeptical",
+    "model": "qwen/qwen3.8-27b",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: claim metric/topic absent from selected evidence; forecast presented as certain; unsupported numeric claim; unsupported numeric claim in selected evidence",
+    "model_validation": [
+      "claim metric/topic absent from selected evidence",
+      "forecast presented as certain",
+      "unsupported numeric claim",
+      "unsupported numeric claim in selected evidence"
+    ],
+    "final_validation": [],
+    "word_count": 437,
+    "prompt_sha256": "641dd4e3815d844e9ed0bbfac361cfb4805f0911074868955d24911237ce1323",
+    "source_code_sha256": "76eebd75ba8e1032cb62c153e0402a3c906837e01056ad1399067402788f5df8",
+    "usage": {
+      "queue_time": 0.045672294,
+      "prompt_tokens": 6064,
+      "prompt_time": 0.446401967,
+      "completion_tokens": 2398,
+      "completion_time": 4.694808631,
+      "total_tokens": 8462,
+      "total_time": 5.141210598,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1499
+      }
+    }
+  },
+  {
+    "experiment": "model_qwen_final",
+    "review": "skeptical",
+    "model": "qwen/qwen3.8-27b",
+    "mode": "model",
+    "fallback_reason": null,
+    "model_validation": [],
+    "final_validation": [],
+    "word_count": 395,
+    "prompt_sha256": "4868021964cc0a59bfe2361295bd11f8d599536c0972998fcf86f584999b2d23",
+    "source_code_sha256": "3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db",
+    "usage": {
+      "queue_time": 0.044316713,
+      "prompt_tokens": 3944,
+      "prompt_time": 0.272101544,
+      "completion_tokens": 4604,
+      "completion_time": 9.171320932,
+      "total_tokens": 8548,
+      "total_time": 9.443422476,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3604
+      }
+    }
+  },
+  {
+    "experiment": "model_qwen_v2",
+    "review": "skeptical",
+    "model": "qwen/qwen3.8-27b",
+    "mode": "offline",
+    "fallback_reason": "API HTTP 429",
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 435,
+    "prompt_sha256": "2daa108bce61eecdeebe107ab1980a3d5ca438e72a3ff18182c74efe17eb7eef",
+    "source_code_sha256": "7c62c2ec718a60082815ded72eae7143ce6d055ee12a55d29308e96658bdecba",
+    "usage": null
+  },
+  {
+    "experiment": "model_qwen_v3",
+    "review": "skeptical",
+    "model": "qwen/qwen3.8-27b",
+    "mode": "offline",
+    "fallback_reason": "Model validation failed: claim metric/topic absent from selected evidence",
+    "model_validation": [
+      "claim metric/topic absent from selected evidence"
+    ],
+    "final_validation": [],
+    "word_count": 435,
+    "prompt_sha256": "a416de6d94502c4cc62a9fc1f3bcf05207e33c42fd2d6ac8f6a1ec9571e40274",
+    "source_code_sha256": "fe06f9d4b154ecb8e4e24a1c3ba64dd1701978d86ea4c889dfc6c66cb88dfc2b",
+    "usage": {
+      "queue_time": 0.043713643,
+      "prompt_tokens": 4077,
+      "prompt_time": 0.282860552,
+      "completion_tokens": 3209,
+      "completion_time": 6.413898558,
+      "total_tokens": 7286,
+      "total_time": 6.69675911,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2126
+      }
+    }
+  },
+  {
+    "experiment": "offline_a",
+    "review": "balanced",
+    "model": null,
+    "mode": "offline",
+    "fallback_reason": null,
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 489,
+    "prompt_sha256": "7dad82b2a203e7642921b161bb83663ed9ab7048f0df0f36e0f5846be553df0c",
+    "source_code_sha256": "3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db",
+    "usage": null
+  },
+  {
+    "experiment": "offline_b",
+    "review": "balanced",
+    "model": null,
+    "mode": "offline",
+    "fallback_reason": null,
+    "model_validation": null,
+    "final_validation": [],
+    "word_count": 489,
+    "prompt_sha256": "7dad82b2a203e7642921b161bb83663ed9ab7048f0df0f36e0f5846be553df0c",
+    "source_code_sha256": "3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db",
+    "usage": null
+  }
+]

@@ -1,0 +1,25 @@
+# R3 changed-code independent verification
+
+Status: **PASS for the core runnable assignment workflow; no new core blocker found.** All 25 automated tests pass, including the unchanged six original independent regressions. This approves the reviewed implementation scope, not the factual accuracy of every possible model response. A4 separately reviews the final brief.
+
+Director/reviewer: `/root`. Changed only this report; previous review evidence and tests preserved. Reviewed code SHA-256: `3428d9eb3492d13346894dbd556c878c418c2b40a930bd3303e848ca0e3b19db`; prompt: `665802eb1dba4cccd1ede24bd4894ce4cffe0d31d3603cb83aac8260a21243ab`. Original six-test file remains `8c25e0de9c084be8d26477fd860f9927f1a725d9b44b2f01b3e14311f1cb750f`.
+
+## Checks and evidence
+
+- Read current `orchestrator.py`, `system_prompt.md`, new integration tests, and existing test coverage. Ran `python3 -m unittest discover -s tests -v`: **25/25 passed in 0.169 seconds**. The suite uses a localhost test HTTP gateway and mocks for external/live requests; no real provider or public live URL was called.
+- Original regression cases still reject false unrelated-quote claims and revenue-to-PAT/sign substitution, detect late same-period conflicts, separate different quarters, exclude the explicit unrelated-entity case, and keep generated artifact paths outside input directories. Original file-hash immutability test still passes. No test acceptance condition was weakened by this reviewer.
+- R2 exact counterexamples now have direct tests: current Q1 FY27 margin falsely stated as 12.9% is rejected, as is a fall in copper prices against the source's sharp rise. Percentage table display no longer carries the currency label. Adapted offline text is no longer misleadingly wrapped as a verbatim quotation.
+- Fiscal-year normalization correctly equates short/long forms in the focused test and prevents FY27 suffixes becoming standalone numeric values. Forecast questions no longer receive the declarative-certainty false positive. Evidence units now retain paragraph speaker/qualification context. Compact model input carries accepted source metadata and evidence catalog; excluded/quarantined bodies do not enter that catalog.
+- Conflict completeness now checks competing values and growth rates in a matching Open questions item for model output. Earlier metric conflict, intended-appeal and schema-before-rendering gateway fallback checks remain green.
+- Gemini routing has a distinct compatible endpoint/model configuration, JSON response format and supported request construction. The provider test scans emitted artifacts and finds no configured fake key. Configuration keys are kept in request headers, not audit/request JSON. An additional independent mocked HTTP429 probe used a fake secret in the provider error body: `api_call` retained status/retry information and replaced the configured key with `[REDACTED]`.
+- The SRVCABLE live guard remains before ingestion or retrieval; the mocked fetch function is never called for either live flag. Real mode still requires explicit opt-in and explicit URLs, limits public HTTPS Markdown/plain-text retrieval, disallows redirects, and validates metadata. Provenance URLs remain inert.
+
+## Residual limitations
+
+1. Grounding checks remain conservative lexical/metric heuristics, not semantic entailment. Current-value binding supports specified simple declarative table phrasing; arbitrary paraphrases, causal assertions, denominators and all historical/current relationships still need source review. Questions can contain unsupported factual premises despite the prompt. No automatic no-hallucination guarantee is justified.
+2. The temporal comparison gate's error label says “dated,” but code enforces old/current source citations plus historical/older and promoter-holding wording; it does **not** require the actual measurement dates or both pledge values. Director was notified. A4 should verify those details in the final brief. This is a gate coverage limitation, not evidence that the final brief is wrong.
+3. Source identity/trust, reporting period, units and conflict extraction remain document-pattern based. They are not comprehensive entity resolution or authentication. Paragraph preservation improves attribution but does not make every clause support every derived claim.
+4. The previously recorded live-fetch DNS-rebinding/proxy limitation remains: preflight DNS validation is separate from urllib's connection resolution. This is not a hardened arbitrary-untrusted-URL fetch service. No adversarial request was attempted.
+5. Gemini live API acceptance and inference quality were not verified here. A passing mock establishes route/payload/fallback behavior only. API refusals, malformed output or failed gates are labeled offline fallback rather than model success.
+
+No recording, deployment, submission or final prose approval was performed. Resources: one bounded local suite and a small mocked error probe, negligible extra storage, under five minutes. Next dependency: director integrates A4's source-level prose review and records the above limitations; rerun checks only if further code changes occur.

@@ -1,0 +1,16 @@
+{
+  "visible_content": "{\"Snapshot\":[{\"text\":\"Sarvottam Cables Ltd manufactures power cables, wires and conductors.\",\"citations\":[\"S3\"],\"evidence\":[{\"id\":\"S3:E3\"}]},{\"text\":\"Revenue from operations in Q1 FY27 was ₹1,248 crore, up 18.0% YoY.\",\"citations\":[\"S3\"],\"evidence\":[{\"id\":\"S3:E4\"}]},{\"text\":\"Profit after tax was ₹82 crore, up 5.9% YoY.\",\"citations\":[\"S3\"],\"evidence\":[{\"id\":\"S3:E7\"}]},{\"text\":\"EBITDA margin was 11.2% in Q1 FY27, down 170 bps from 12.9%.\",\"citations\":[\"S3\"],\"evidence\":[{\"id\":\"S3:E6\"}]}],\"Bull case\":[{\"text\":\"Management maintains FY27 revenue growth guidance of 15–17% and plans to double data‑centre cable sales in two years.\",\"citations\":[\"S2\"],\"evidence\":[{\"id\":\"S2:E1\"},{\"id\":\"S2:E3\"}]},{\"text\":\"The new Bharuch plant will add ~30% capacity and is expected to begin commercial production in Q3 FY27, with an order book of ₹3,900 crore.\",\"citations\":[\"S3\"],\"evidence\":[{\"id\":\"S3:E10\"},{\"id\":\"S3:E8\"}]}],\"Bear case\":[{\"text\":\"Operating margins contracted by 170 bps due to a ~14% rise in copper prices during the quarter.\",\"citations\":[\"S1\"],\"evidence\":[{\"id\":\"S1:E4\"}]},{\"text\":\"Accounts receivable days rose from 78 to 96, mainly because of slower payments from two large state utility customers.\",\"citations\":[\"S2\"],\"evidence\":[{\"id\":\"S2:E11\"},{\"id\":\"S2:E12\"}]},{\"text\":\"The company received a ₹46.3 crore GST demand order, which it plans to appeal and does not expect material impact.\",\"citations\":[\"S7\"],\"evidence\":[{\"id\":\"S7:E1\"},{\"id\":\"S7:E2\"},{\"id\":\"S7:E3\"}]}],\"Open questions\":[{\"text\":\"Revenue conflict: Official filing shows ₹1,248 crore vs news report of ₹1,428 crore; growth 18.0% vs 35%.\",\"citations\":[\"S3\",\"S1\"],\"evidence\":[{\"id\":\"S3:E4\"},{\"id\":\"S1:E2\"}]},{\"text\":\"Promoter pledge difference: 4.1% of promoter holding in Jun‑2026 vs 6.0% in Mar‑2026 and 11.5% in Jun‑2025.\",\"citations\":[\"S8\"],\"evidence\":[{\"id\":\"S8:E2\"}]},{\"text\":\"Accounts receivable days increase: From 78 to 96; how will this affect cash conversion?\",\"citations\":[\"S2\"],\"evidence\":[{\"id\":\"S2:E11\"}]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "queue_time": 0.394250416,
+    "prompt_tokens": 5647,
+    "prompt_time": 0.282508012,
+    "completion_tokens": 1785,
+    "completion_time": 1.8080813070000001,
+    "total_tokens": 7432,
+    "total_time": 2.0905893190000002,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1140
+    }
+  }
+}
